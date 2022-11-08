@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>f-notes</title>
+    <style>
+      html{
+        scroll-behavior: smooth;
+      }
+        body {
+  margin: 0;
+  color: #222222;
+  font-size: 1em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/*---------- heading ----------- */
+.masthead {
+    padding: 15em 0;
+    background-image: url("images/f-notes.jpg");
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 1em solid #ffcf33;
+}
+
+.masthead-heading {
+  font-size: 6em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  text-shadow: 1.5px 3px 0px #edc647;
+  color: #F7E199;
+  margin-top: -0.2em;
+
+}
+.masthead-intro {
+  font-size: 2em;
+  font-family: "Gentium Book Basic", Georgia, serif;
+  text-align: center;
+  color: #e5e5e5;
+  margin-bottom: 0.1em;
+}
+
+/*---------- section ----------- */
+.intro,
+.where-Im-from,
+.more-about-me {
+  max-width: 38em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.intro > p,
+.where-Im-from > p,
+.more-about-me > p {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+section > h1 {
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-bottom: 50px;
+  padding-top: 30px;
+}
+
+.more-about-me > h2 {
+  font-size: 1.2em;
+  font-family: "Gentium Book Basic";
+  font-weight: bold;
+  color: #f7e199;
+}
+
+/*---------- footer ----------- */
+.content-footer {
+  margin-top: 8em;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  background-color: #ffcf33;
+}
+
+.content-footer > p {
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-family: "Open Sans"
+}
+
+footer > ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+footer ul li {
+  list-style-type: none;
+  display: inline;
+}
+
+.content-footer a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #000;
+}
+
+
+   h2{
+    text-align: center;
+   }
+   a{
+    text-decoration: none;
+   }
+
+   .whatsapp_float{
+
+position: fixed;
+bottom: 40px;
+right: 10px;
+}
+button{
+    background-color: orangered;
+    color: white;
+    border: orangered;
+    width: 110px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/*
+Table
+*/
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+
+
+
+/* general styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  
+}
+.form{
+    text-align: center;
+}
+p{
+    font-size: 25px;
+}
+/*
+Dropdown
+
+*/
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #222222
+}
+
+/* Dropdown */
+
+.dropdown {
+  
+  width: 230px;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+.dropdown.toggle > input {
+  display: none;
+}
+.dropdown > a, .dropdown.toggle > label {
+  border-radius: 2px;
+  box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+}
+.dropdown > a::after, .dropdown.toggle > label::after {
+  content: "";
+  float: right;
+  margin: 15px 15px 0 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #CCC;
+}
+.dropdown ul {
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+.dropdown a, .dropdown.toggle > label {
+  display: block;
+  padding: 0 0 0 10px;
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background:orangered;
+}
+.dropdown li {
+  height: 0;
+  overflow: hidden;
+  transition: all 500ms;
+}
+.dropdown.hover li {
+  transition-delay: 300ms;
+}
+.dropdown li:first-child a {
+  border-radius: 2px 2px 0 0;
+}
+.dropdown li:last-child a {
+  border-radius: 0 0 2px 2px;
+}
+.dropdown li:first-child a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #FFF;
+  margin: -10px 0 0 30px;
+}
+.dropdown a:hover, .dropdown.toggle > label:hover, .dropdown.toggle > input:checked ~ label {
+  background-color: gold;
+  color: black;
+}
+.dropdown > a:hover::after, .dropdown.toggle > label:hover::after, .dropdown.toggle > input:checked ~ label::after {
+  border-top-color: #AAA;
+}
+.dropdown li:first-child a:hover::before {
+  border-bottom-color: #EEE;
+}
+.dropdown.hover:hover li, .dropdown.toggle > input:checked ~ ul li {          
+  height: 40px;
+}
+.dropdown.hover:hover li:first-child, .dropdown.toggle > input:checked ~ ul li:first-child {
+  padding-top: 15px;
+}
+
+/*
+UP Button
+*/
+.up_float_btn{
+
+position: fixed;
+bottom: 40px;
+left: 10px;
+}
+.btn-1{
+    background-color: orangered;
+    color: white;
+    border: orangered;
+    width: 110px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.number{
+  font-size: 20px;
+}
+   </style>
+</head>
+<body>
+    
+    
+    <div class="whatsapp_float">
+        <a href="index2.html" class="whatsapp_float_btn">
+                <button>Back</button> </a>
+            </div>
+            <div class="up_float">
+                <a href="#h2" class="up_float_btn">
+                        <button class="btn-1">Up</button> </a>
+                    </div>
+  <h2 id="h2">INFOTECH COMPUTER EDUCATION CENTRE</h2>
+    <header class="masthead">
+        <p class="masthead-intro"></p>
+        <h1 class="masthead-heading"></h1>
+      </header>
+      <section class="intro" id="up">
+        <!-----------DropDown-->
+   <center>
+    <nav>
+      <div class="dropdown hover" id="up3">
+        <a href="#up3" class="drop1">Select Topic</a>
+        <ul>
+          <li><a href="#software">Software</a></li>
+          <li><a href="#memory">Computer Memory</a></li>
+          <li><a href="#Generation">Generation of Computer</a></li>
+          <li><a href="#Parts">Part of Computer</a></li>
+         
+          <li><a href="#Operating">Operating System</a></li>
+          <li><a href="#shortcut">Short Cut</a></li>
+          <li><a href="#fullform">Fullform</a></li>
+          <li><a href="#block-diagram">Block Diagram</a></li>
+          <li><a href="#number-system">Number System</a></li>
+        
+        </ul>
+      </div>
+      </nav>
+      </center>
+       <h3>1.Q:-  What is computer ?</h3>
+       <p>Ans:- Computer is a fast and accurate electronic machine which accept and stores information (data) processes the information based on instruction given to its and Produces the desired results. Apart from these functions, we can type letters, draw pictures, make graphics, listen to music see movies and also play games. The computer word has been design from the English word compute, compute means counting. </p>
+<h3>2Q:- Which use of computer?</h3>
+<p>
+    Ans:- Computer are used for
+    <br>
+1)	Doing repetitive tasks.
+<br>
+2)	Processing large amount data.
+<br>
+3)	Getting accurate and align output.
+<br>
+4)	Saving time and Human power.
+
+</p>
+<h3>3Q:- Who was the father of computer?</h3>
+<p> Ans:- Charles Babbage was the father of computer.</p>
+<h3>4Q:- Which is  the device of computer ?</h3>
+<p> Ans:- Computer has been mainly three device-
+    i)	Input Device for 	Ex- Mouse, Keyboard.
+    ii)	Output Device for 	Ex- Monitor, Printer.
+    iii)	Storage Device for Ex- CPU.
+    </p>
+    <h3>5Q:- Describe the Device of Computer? Are explaining.</h3>
+    <p>
+        Ans:- Device is descript bellow-   
+        <br>
+            I)	Input Device:- Input Device that the device through which we can convert our requirement instruction and information to the computer memory.
+<br>
+        II)	Output Device:- Output Device is that the device through which we can take out the results converted by the input device or CPU.
+<br>
+        III)Storage Device:- Storage Device is the which works accurately converted by an operation . It is called the brain of computer.
+
+    </p>
+    <h3>
+        6Q:- Which is the system of computer ?
+    </h3>
+    <p>
+        Ans:- Two system of computer ?
+        <br>
+1)	Computer Hardware
+<br>
+2)	Computer Software
+
+    </p>
+    <h3>7Q:- What is Hardware ?</h3>
+    <p>Ans:- The Physical Components of a computer system that can be run , seen and can  also be Physically touch that is called Computer Hardware. For Ex- Mouse Keyboard.</p>
+<h3>
+    Types and use of Hardware:- 
+</h3>   
+<p> i)Hardware for input known as input device.
+    <br>
+    ii)	Hardware for output known as output device
+    <br>
+    iii)Hardware for storage known as storage device
+    <br>
+    iv)	Hardware for processing data known as processing unit.
+
+    </p>
+<h3>8Q:- What is Software ?</h3>
+<p>Ans:- The applications or the programs of a computer that can be  Run and seen but cannot be physically touch that is a called computer Software. For Ex- Operating system, M.S office.</p>
+<h3>9Q:- What types of software?</h3>
+<P>Ans:- A) System Software
+<br>
+    B) Application Software
+    <br>
+    C) Utility software
+</P>
+<!----------Software-->
+<div id="software">
+<h3>10Q:- Describe the software are explaining? </h3>
+
+<p>
+    Ans:- software is that part of the computer the enables the hardware to operate software can be defined as a set of instructions  are given to the computer with which the computer processes data(input) and gives information( output) . these set of instruction also are called programs.
+<br><br>
+Software can be broadly classified into two categories:
+<br>
+i)	System Software
+<br>
+ii)	Application Software
+<br>
+iii) Utility software
+
+</p>
+<p>
+    <h3>System Software</h3>System software are computer programs that run a computer system itself or assist in running application programs. System software are hardware oriented i.e. they are designed in a way so as take maximum advantage of the available hardware resources. 
+For example- operating system, Language translators.
+
+</p>
+<p>
+    <h3>Application Software</h3> Application Software are computer programs that  user oriented . They are designed to accomplish specific user tasks such as helping to write letter, drawings , calculating , accounting , payroll, etc.
+For  example:- word processor, spreadsheets.
+</p>
+<h3>Utility software</h3>
+<p>Utility software is software designed to help analyze, configure, optimize or maintain a computer.[1] It is used to support the computer infrastructure - in contrast to application software, which is aimed at directly performing tasks that benefit ordinary users. However, utilities often form part of the application systems. For example, a batch job may run user-written code to update a database and may then include a step that runs a utility to back up the database, or a job may run a utility to compress a disk before copying files. Eg - Anti Virus</p>
+</div>
+<!-----------Memory-->
+<div id="memory">
+<h3>11Q:-What types of Memory? Explain.</h3>
+<p>
+    Ans:- Three types of Memory-
+    <br>
+a)	Primary Memory
+<br>
+b) Secondary Memory
+<br>
+c) Cache Memory
+<h4>Primary Memory</h4>
+<p>Primary memory is a segment of computer memory that can be accessed directly by the processor. In a hierarchy of memory, primary memory have access time less than secondary memory and greater than cache memory. Generally, primary memory has a storage capacity lesser than secondary memory and greater than cache memory.</p>
+</p>
+<h4>Secondary Memory</h4>
+
+<p>In a computer, memory refers to the physical devices that are used to store programs or data on a temporary or permanent basis. It is a group of registers. Memory are of two types (i) primary memory, (ii) secondary memory. Primary memory is made up of semiconductors, It is also divided into two types, Read-Only Memory (ROM) and Random Access Memory (RAM). Secondary memory is a physical device for the permanent storage of programs and data(Hard disk, Compact disc, Flash drive, etc.).</p>
+<h4>Cache Memory</h4>
+<p>Cache Memory is a special very high-speed memory. It is used to speed up and synchronizing with high-speed CPU. Cache memory is costlier than main memory or disk memory but economical than CPU registers. Cache memory is an extremely fast memory type that acts as a buffer between RAM and the CPU. It holds frequently requested data and instructions so that they are immediately available to the CPU when needed.</p>
+</div>
+
+<h3>12Q:- Describe the Classification of Computer?</h3>
+<p>
+    Ans:- The computer classification are depending on their speed , cost , Size and their storage capacity as follows-
+
+    <h4>Micro Computer</h4>
+	
+    Micro Computer is called a PC (Personal Computer). It is a small computer that is very economical in cost. A typical micro computer has a keyboard for input as screen and a printer for output and one or two disk drive for secondary storage. The most widely known micro computer made by IBM. 
+<br>
+    <h4>Mini Computer</h4>
+	Medium sized computer are commonly called mini computers. These computers usually have several terminals for input and a printer for output, one or more disk drive for axon diary storage. Minicomputers have a grater storage capacity and are faster than micro computer.
+
+<br>   
+<h4> Mainframe Computer</h4>
+
+	A mainframe computer has many terminals a serial printers, and several disk and tape drivers, these types of computer can process several programs can currently and can be used many people at one time. It has a great storage capacity and very powerful processing speed. For example :- ATM( Automated Taller Machine)
+<br>
+  <h4>  Super Computer</h4>
+  	The most power full computer are called super computer . These computer are designed for very fast processing speed . They may not have as many terminals and must auxiliary storage as mainframe computer , but their processing computer operate much faster they are mainly used for complex machine calculation such or specialize application such as whether forecasting etc . Cray rickshaw INC developed the first super computer that ware commercially successful.
+</p>
+<!-----------Computer Generation-->
+<div id="Generation">
+<p>
+   <h4> Q13: GENERATION OF COMPUTER</h4>
+    
+    
+    <h3>First Generation </h3>:- The Computer is the period of first generation were used by 1000 of vacuumed tubes ENIAC, EDVAC, EDSAC and IBM were the computer of first generation . The memory of these computer used electro magnetically the first generation computer were mainly used for scientific computations the characteristic features of the computer generation are-
+    <br>
+  i)They were the fastest calculating   device at that time.
+  <br> 
+  ii)	They too bulky in size required large room for instruction.
+  <br> 
+  iii)	In these computers thousands of individual components were ascended manually by hand into electronic circuits.
+    Vacuum tubes:-  The Vacuum tube in fragile glass device which used filaments as a source of electronic and can control and amplify electronic signs. It was the only high speed electronic switching device available in those days.
+    EDVAC:- Electronic discrete variable automatic computer.
+    EDSAC:-  Electronic delay storage Automatic Calculator.
+    ENIAC :-   Electronic  numerical Integrator and Calculator.
+    IBM :-  International Business Machine.
+      <br>
+       
+     <h3>Second Generation</h3> :- The Computer is Second Generation used by electronic switching device. This called transistor. John Barden, William Shockley and William Brattain invented the transistor at Bell laboratories in 1947 the second generation computer were increasingly used  in Business and industry for commercial data processing application , like payroll, inventory control marketing and   production planning FORTRAN COBOL etc, are the second generation computer.
+       Characteristic features of second generation   
+   <br>
+       1)	They were more than ten times fasten than the first generation computer.
+   <br>
+       2)	They  were smaller in size than first generation computer and required smaller stapes.
+   <br>
+       3)	In this computer thousands of individual transistor had to be assemble manually by hand in to be electronic circuits making difficult and costly. 
+    
+    <h3>Third Generation</h3> :- The third generation Computer used by integrated circuits (IC) the integrated are the circuits consisting of several electronic components like transistor , registers  and capacitors grown on a single chip of silicon elevating wired interconnecting between components.
+        The IC used in the third generation was eliminated by more electronics technology as SI (Small scale integration). These IC & were smaller less expensive to produce more rugged and reliable faster in operation , dissipated less heat and consume less power than circuits whetted by working electronic , components , so the third generation computer  were more powerful , more reliable, less expensive , smaller , coolers to  operate than second generation computer.
+        Characteristic feather of third generation
+    <br>
+        1)	They were more powerful than second generation computer capable of performing about one million instructions per second.
+    <br>
+        2)	They were smaller size and more capable in spacing.
+   <br>
+        3)	They were more reliable and less prance to hardware falters than second generation computers requiring lower maintains cost.
+    Jack St. Clare Kirby and Rebirth naiji invented circuit’s in1958.   
+       
+    <h3>Fourth Generation</h3> :- Fourth Generation computer (1971-1989) average number of components page down a silicon chip double each year after 1965. These Progress soon led to the era of LSI (Large Scale Integration) ) and when it was possible to integrate over 30,000 electronic components on a single chip followed by very large integration (VLSI) . At when it was possible to integrate about 1 million electronic components on a single chip. This progress led to dramatic developments creation of microprocessor on a  single chip.
+        Characteristic features of 4th generation-       
+    <br>
+        1)	The PC were (Personal Computer) very smaller and cheaper than .
+    <br>  
+     2) They consume less power.
+    <br>
+     3)	They are very reliable and less prone to hardware failures than the 3rd Generation Computer.
+    <br>
+     4)	Network of Computer enable sharing of resources like disk printer etc, among multiple computer and their user. LAN, WAN, WIDE Network Connecting facilities Creation improve in this generation Computer.
+      <br>
+  <h3> Fift Generation</h3> (1989 till date) the trend of further miniaturization electronic components dramatic increases in power micro processor chip memory and Hard disk continue during 5th generation.
+        The VLSI (Very Large scale Integration) technologies quickly improve VLSI
+    <h3>Sixth Generation :</h3>
+    <p>
+        The Sixth Generation of computers is different from, other generation computers in terms of size, speed and tasks that perform. These computers are called intelligent computers based on artificial intelligence or artificial brains. Whereas, it uses the semiconductors as the raw material to its processors. Moreover, the sixth generation introduces the voice recognization which takes dictation and recognizes the words. By using the voice recognization, you can search and send the messages quickly and easily. Although people need to speak slowly and clearly to work properly. With the 6th generation computers, the complex problem solving is possible and researches are ongoing to find the ways to solve the problems more efficiently and easily.
+    </p>
+</p>
+</div>
+
+<p>
+<!-----------Part of Computer-->
+<div id="Parts">
+   <h3>Q.14: Describe the some important parts of computer?</h3>
+    Ans:- <br>
+    CPU: - The Central Processing Unit (CPU) the brain of Computer is called the CPU or the processor. The CPU performs the following functions.
+    <br>
+    	Arithmetic Operation
+    <br>
+    	Logical Operation
+    <br>
+    	Input/ Output Operation
+    <br>
+    	 Internal data movements.
+   <br>
+    	Data Manipulation.
+   <br>
+   <h4> Keyboard</h4>:- 
+   <br>
+   The Computer Keyboard has various kind of keys, which can be pressed either  individually or in combination with other keys to enter data or instructions into a computer system.
+   <br>     
+   The keys in a typical keyboard can be categorized as –
+  <br>
+   	Alphabet Keys ( A- Z or a-z)
+   <br> 
+   	Numbers Keys (0- 9)
+   <br> 
+   	Symbolic Keys (@! #$%^&*(),.?_)
+   <br>
+   	Functioned Keys (F1 – F12)
+   <br> 
+   	Special Keys ( Caps lock, space, enter, backspace, Shift, Alt, Ctrl)
+    <br>
+   	Arrow Keys (Up, Down, Left, Right) 
+   <br>
+   	Command Key(Delete, Home, Page Up, Page Down, Insert)
+   <br>
+   	Num Lock ( Division, Multification,  Subtraction, Addition)
+   <br>
+   <h4>Mouse</h4>:- A mouse is a pointing device . It enables a user to manipulate a pointer or an arrow on the computer screen. When the user rolls the mouse across a flat surface, the screen cursor moves in the direction of the mouse’s movement, such movements enable the user to-
+   <br>
+   	Point to icons or tiny pictures that identify processing choices.
+   <br> 
+   	Point to items/choices in lists.
+   <br> 
+   	Draw lines and pictures on the screen with a click of the button the user can express his choice.
+    <br>
+    <h4>Scanner</h4>:- A scanner is used to image and pictures and digitize them . These can then be manipulated in a computer according to user choice.
+    <br>
+    <h4>Monitor</h4>:- The computer monitor (on the screen) is a device used for interactive processing i.e. data that is being keyed in is displayed on the monitor . Messages and processed information are also displayed on the screen. 
+    <br>
+    <h4>Printer</h4>:- Computer Output can be printed out on paper and other printable material a using a printer this output is also called “Hard Copy” output . There are different kinds of printers available for different uses.
+    <br>
+    <h4>Magnetic Tapes</h4>:- These are convenient and inexpensive devices, which can be used to store large volumes of data . The magnetic tape is similar to the video cassettes, which we are familiar with. These tapes are wound around a spool and data is recorded and retrieved sequentially from them. 
+    <br>
+   <h4> Floppy Disks</h4>:- Floppy Disks are circular in shape with a hole at the centre . The floppy disk comes enclosed in a paper or plastic Jacket. This is square in shape. The Jacket has an opening provided through which data can be recorded and retrieved. Floppy disks have a write protect notch, which can be adjusted to prevent data from being written on the disk.
+    <br> 
+    <h4>Hard Disks</h4>:- Hard disks are fixed inside a computer system and have high storage capacities . Hard disks come packaged in a metallic case prevent damage due to dust and moisture. 
+    <br>
+   <h4> CD ROM</h4>:- CD ROM( Compact Disk Read only memory) is a non erasable disk used for storing computer data . They are also called optical disks since the technology is based on the use of laser light to store and data.
+    <br>
+    <h3>Q.15: What is Language?</h3>
+    Ans:- A Language is a system of communication . A Programming language consists of all the symbols characters and uses rules that permit people to Communicate with computers. Programming languages may be created for a specific purpose or they may be general purpose tools that may be used to develop May types of applications.
+    <br>
+    <!-------------Operating System-->
+    <div id="Operating">
+   <h3>Operating System</h3>
+   <p>
+    3.1. Introduction to operating system
+    <br><br>
+It is a set of software program. It provides an interface between the user and computer hardware. It controls and operates CPU, Memory, Storage and all the attached devices. It provides a platform for running application software.  Examples: MS-DOS, Microsoft Windows, Linux, UNIX, etc.
+<br>
+3.2. Types of operating system
+<br><br>
+The operating systems are classified on the basis of interface and user / tasks basis. Types of operating system are as follows:
+BASED ON INTERFACE
+<br><br>
+1.	Graphical User Interface (GUI) Operating system: It is a multi tasking operating system. GUI allows users to interact with the computer system using icons, images and graphical representation instead of using text commands. It allows users to work in more than one application simultaneously. Example – Microsoft windows, OS/2, MAC OS, etc.
+<br><br>
+2.	Character User Interface (CUI) Operating system: CUI system uses commands to operate the computer system and it has no graphical content, icons, images as GUI operating system. There is no use of mouse or other similar devices in CUI system. Example – MS-DOS, UNIX.
+<br><br>
+USER BASED/TASK BASED
+<br><br>
+1.	Single task Operating system: In these types of operating system, only one user can operate and only single task can be performed at a time. Example – MS-DOS. 
+<br><br>
+2.	Multi-tasking operating system: In this type of operating system, an user can perform multiple tasks at a time. For example, if user is typing a document during the same time user can also enjoy listening music, printing, etc. Example – Microsoft Windows, LINUX.
+<br><br>
+3.	Multi-user Operating system: multi-user operating system can be operated by more than one user at the same time. It can also execute more than task at the same time. Example – Windows NT, MVS, UNIX. 
+<br><br>
+4.	Graphical User Interface (GUI) Operating system: It is a multi tasking operating system. GUI allows users to interact with the computer system using icons, images and graphical representation instead of using text commands. It allows users to work in more than one application simultaneously. Example – Microsoft windows, OS/2, MAC OS, etc.
+
+<br><br>
+3.3	About Windows
+<br><br>
+WINDOWS: Windows operating system is developed by Microsoft and therefore it is known as MS-Windows. Microsoft windows are a graphical user interface (GUI) operating system. In November 1985 Microsoft has launched its first operating system named as Windows 1.01, till date Microsoft has updated different versions of windows. At present windows 7 and windows 8 are the newer versions of Microsoft Windows. Among which Windows 7 is the popular one and widely used operating system. Some of the windows versions are:
+<br>
+i.	Windows 2000 
+<br>
+ii.	Windows XP
+<br>
+iii.Windows Vista
+<br>
+iv.	Windows server
+<br>
+v.	Windows 7
+<br>
+vi.	Windows 8
+
+
+   </p>
+   </div>
+</p>
+</div>
+<br>
+<!-----------Short Cut-->
+<div id="shortcut">
+<table>
+    <caption>Short Cut</caption>
+    <thead>
+      <tr>
+        <th scope="col">NEW:- Ctrl+ N</th>
+        <th scope="col">Save:- Ctrl + S</th>
+        <th scope="col">Save As= F12</th>
+        <th scope="col">OPEN:- Ctrl+ O</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Account">Cut:- Ctrl + X</td>
+        <td data-label="Due Date">Undo :- Ctrl+ Z</td>
+        <td data-label="Amount">Copy:- Ctrl+ C</td>
+        <td data-label="Period">Paste:- Ctrl + V</td>
+      </tr>
+      <tr>
+        <td scope="row" data-label="Account">Find:- Ctrl + F</td>
+        <td data-label="Due Date">Replace:- Ctrl+ H	</td>
+        <td data-label="Amount">Select All:- Ctrl +A	</td>
+        <td data-label="Period">Select All:- Ctrl +A	</td>
+      </tr>
+      <tr>
+        <td scope="row" data-label="Account">Bold:- Ctrl + B</td>
+        <td data-label="Due Date">Italic:- Ctrl + I	</td>
+        <td data-label="Amount">Underline:- Ctrl + U</td>
+        <td data-label="Period">Justify:- Ctrl + J	</td>
+      </tr>
+      <tr>
+        <td scope="row" data-label="Acount">Align Left:- Ctrl + L</td>
+        <td data-label="Due Date">Align Right:- Ctrl + R</td>
+        <td data-label="Amount">Font Size:-Ctrl +Shift +P</td>
+        <td data-label="Period">Font:-Ctrl+ Shift+ F	</td>
+      </tr>
+    </tr>
+    <tr>
+      <td scope="row" data-label="Acount">Grow Font: - Ctrl +></td>
+      <td data-label="Due Date">Shrink:- Ctrl + < </td>
+      <td data-label="Amount">Subscript:- Ctrl + =</td>
+      <td data-label="Period">Superscript:- Ctrl+Shift+ +</td>
+    </tr>
+    <tr>
+        <td scope="row" data-label="Acount">Equation:- Alt + =</td>
+        <td data-label="Due Date">Page Break:-Ctrl+Return</td>
+        <td data-label="Amount">Refresh:- F5</td>
+        <td data-label="Period">Shutdown computer:- Alt+F4</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <!----------Full Form-->
+<div id="fullform">
+    <h3 class="form">FULL FORM</h3>
+    ADCA: Advance Diploma in Computer Application.
+    <br>
+    PGDCA:- Post Graduate Diploma in computer Application
+    <br>
+    DCA: - Diploma in Computer Application	DTP: - Desk Top Publishing
+    <br>
+    C-DOBM: - Computer Diploma & Office Business Management
+    <br>
+    COMPUTER: - Common Operator Machine Particular Used for Technical Education & Recharge
+    <br>
+    CPU: Central Processing Unit 
+    <br>		
+ROM: - Read Only Memory		
+<br>
+ATM: Automated Teller Machine
+<br>	
+LED: Light Emitting Diode	
+<br>	
+HTML: Hyper Text Markup Language
+<br>
+HTTP: Hyper Text Transfer Protocol	
+<br>
+LAN: Local Area Network		
+<br>
+WAN: Wide Area Network		
+<br>
+GST: Goods & Service Tax	
+<br>
+
+CD ROM: Compact Disk Read only Memory
+<br>
+LCD: Liquated Crystal Display
+<br>
+E-Mail: Electronic Mail
+<br>
+WWW: World Wide Web
+<br>
+MAN: Metropolitan Area Network
+<br>
+MS DOS: Micro Soft Disk Operating System
+<br>
+CGST: Central Goods & Service Tax
+<br>
+IGST: Indian Goods & Service tax	
+<br>
+PGST: Punjab Goods & Service Tax	
+<br>
+GB: Giga bytes		
+<br>		
+TB: Terabytes	
+<br>			
+DA: Daily Allowance/ Dearness Allowance
+<br>
+TA: Travelling Allowance	
+<br>	
+HRA: House Rent Allowance	
+<br>	
+BASIC: Beginners All Purpose Symbolic Instruction Code
+<br>
+ALU: Arithmetic Logical Network
+<br>	
+HDD:-Hard Disk Drive		
+<br>	
+MAC: Media Access Control	
+<br>	
+SMS: Short Message Service	
+<br>	
+PAN: Permanent Account Number 
+<br>
+SGST: State Goods & Service tax
+<br>
+PAN: Permanent Account Number
+<br>
+MB: Megabytes
+<br>
+CD: Compact Disc
+<br>
+MA: Medical Allowance
+<br>
+GS: Gross Salary
+<br>
+USB:- Universal Serial Bus
+<br>
+CCNA: Cisco Certified Network Associate
+<br>
+CCTV: Closed Circuit Television
+<br>
+SIM: Subscriber Identity Mobile
+
+</div>
+<!-------------Features of Computer-->
+<div id="features">
+    <h3>FEATURES OF THE COMPUTER </h3>
+    <b>Speed</b>:- The Smallest unit of time , the second is long enough for the computer to perform a dozen tasks. Generally a computer takes about 1/106 of a second to carry out one instruction. For example, a powerful computer could perform three million calculations in a second, involving the addition of say two 18 digit numbers.
+<br><br>
+   <b> Accuracy</b>:- The computer is very accurate. Almost without exception, the errors in computing are due to human rather than technological weaknesses.
+<br><br>
+  <b>  Versatility</b>:-Computer seems capable of performing almost any task provided to it and that task can be broken down into a series of logical steps.
+<br><br>
+  <b>  Automation</b>:- You can do almost any work repetitively. The Computer executes the instructions automatically without any human intervention and can perform diverse tasks simultaneously.
+<br><br>
+   <b> Diligence</b>:-Being machine, a computer dose not suffer from the human traits of tiredness and lack of concentration. If 3 million calculations have to be performed, it will perform the 3 millionth instructions with exactly the same accuracy and speed as the first.
+<br><br>
+    <b>Storage</b>:- The Computer has an enormous capacity for data storage which can be retrieved very quickly.
+</div>
+<!----------History of Computer-->
+<div id="history">
+<h3>HISTORY OF COMPUTER </h3>
+<p>
+    The history of computers starts out about 2000 years ago, at the birth of the abacus a wooden rack holding two horizontal wires with beads strung on them. Hen these beads are moved around, according to programming rules memorized by the user, all regular arithmetic problems can be done. Another important invention around the same time was the astrolabe use for navigation.
+	Blasé Pascal is usually created for building the first digital computer in 1642. It added numbers entered with dials and was made to help his father, a tax collector. In 1671, Gottfried Wilhelm von Leibniz invented a computer that was built in 1694. It could add, and after changing some things around, multiply.
+</p>
+<p>
+    <b>Advances in the 1950’s:-  </b>
+	Early in the 50’s two important engineering discoveries changed the image of the electronic computer field, from one of fast but unreliable hardware to an image of relatively high reliability and even more capability. These discoveries were the magnetic core memory and the Transistor Circuit Element. These technical discoveries quickly found their way into new models of digital computers.
+  <br>
+  <b> Advances in the 1960’s:-</b>  
+	Early in the 60’s, efforts to design and develop and fastest possible computer with the greatest capacity reached a turning point with the LARC machine.
+More Recent Advances:-  
+<br>	
+The trend during the 1970’s was to some extent, moving away from very powerful, single purpose computers and toward a large range of applications for cheaper computer systems.
+	A new revolution in computer hardware was under way, involving shrinking of computer logic circuitry and of components by what are called large-scale integration (LSI) techniques.
+	In the 1980’s, Very large scale integration (VLSI) in which hundreds of thousands of new to the computer field, introduced in the 1970s programmable minicomputers supplied with (PC’s), which are programmable machines small enough and inexpensive enough to be purchased and used by individuals.    
+
+
+</p>
+</div>
+<!-----------Block Diagram-->
+<div id="block-diagram">
+  <h3 class="form">BLOCK DIAGRAM</h3>
+ <center><img src="images/block-dia.png" ></center>
+ <P>
+ <u> CPU – Central Processing Unit</u>
+ <br>
+Central Processing Unit or the CPU, is the brain of the computer. It works the same way a human brain works. As the brain controls all human activities, the CPU too controls all tasks.
+
+Moreover, the CPU conducts all the arithmetical and logical operations in the computer.
+
+Now the CPU comprises of two units, namely – ALU (Arithmetic Logic Unit) and CU (Control Unit). Both of these units work in sync. The CPU processes the data as a whole.
+<br><br>
+<u>ALU – Arithmetic Logic Unit</u>
+<br>
+The Arithmetic Logic Unit is made of two terms, arithmetic and logic. There are two major functions that this unit performs.
+
+Data inserted through the input unit into the primary memory. Performs the basic arithmetical operation on it. Like addition, subtraction, multiplication, and division. It performs all sorts of calculations required on the data. Then sends back data to the storage.
+The unit is also responsible for performing logical operations like, AND, OR, Equal to, Less than, etc.  In addition to this it conducts merging, sorting, and selection of the given data.
+<br><br>
+<u>CU – Control Unit</u>
+<br>
+The control unit as the name suggests is the controller of all the activities/tasks and operations. All this is performed inside the computer.
+The memory unit sends a set of instructions to the control unit. Then the control unit in turn converts those instructions. After that these instructions are converted to control signals.
+ </P>
+</div>
+<hr>
+<!-----------Computer Number System-->
+<div id="number-system">
+  <h3 class="form">NUMBER SYSTEM</h3>
+  <p>
+    When we type some letters or words, the computer translates them in numbers as computers can understand only numbers. A computer can understand the positional number system where there are only a few symbols called digits and these symbols represent different values depending on the position they occupy in the number.
+<br>
+ The value of each digit in a number can be determined using −
+<br><br>
+1. The digit
+<br>
+2. The position of the digit in the number
+<br>
+3. The base of the number system (where the base is defined as the total number of digits available in the number system)
+<br><br>
+<u>Decimal Number System</u>
+<br>
+The number system that we use in our day-to-day life is the decimal number system. Decimal number system has base 10 as it uses 10 digits from 0 to 9. In decimal number system, the successive positions to the left of the decimal point represent units, tens, hundreds, thousands, and so on.
+
+Each position represents a specific power of the base (10). For example, the decimal number 1234 consists of the digit 4 in the units position, 3 in the tens position, 2 in the hundreds position, and 1 in the thousands position. Its value can be written as
+<br>
+(1 x 1000)+ (2 x 100)+ (3 x 10)+ (4 x l)
+<br>
+(1 x 103)+ (2 x 102)+ (3 x 101)+ (4 x l00)
+<br>
+1000 + 200 + 30 + 4
+<br>
+1234
+<br><br>
+
+<table  class="number">
+    <thead>
+      <tr>
+        <th scope="col">Sl No</th>
+        <th scope="col">Number System and Description</th>
+      </tr>
+    </thead>
+    <tr>
+      <td >1</td>
+      <td >Binary Number System
+<br>
+        Base 2. Digits used : 0, 1</td>
+    
+    </tr>
+    <tr>
+      <td >2</td>
+      <td >
+        Octal Number System
+<br>
+        Base 8. Digits used : 0 to 7
+       </td>
+    
+    </tr>
+    <tr>
+      <td >3</td>
+      <td >
+ Hexa Decimal Number System
+<br>
+        Base 16. Digits used: 0 to 9, Letters used : A- F
+</td>
+    
+    </tr>
+   
+</table>
+
+<br><br>
+<u>Binary Number System</u>
+<br>
+- Characteristics of the binary number system are as follows −
+<br>
+- Uses two digits, 0 and 1
+<br>
+- Also called as base 2 number system
+<br>
+- Each position in a binary number represents a 0 power of the base (2). Example 20
+<br>
+- Last position in a binary number represents a x power of the base (2). Example 2x where x represents the last position - 1.
+<br><br>
+<b>Example</b>
+<br>
+Binary Number: 10101<sub>2</sub>
+<br>
+Calculating Decimal Equivalent −
+
+  <br><br>
+<table  class="number">
+  <thead>
+    <tr>
+      <th scope="col">Step</th>
+      <th scope="col">Binary Number</th>
+      <th scope="col">Decimal Number</th>
+    </tr>
+  </thead>
+  <tr>
+    <td >Step 1</td>
+    <td >10101<sub>2</sub></td>
+    <td >((1 x 24) + (0 x 23) + (1 x 22) + (0 x 21) + (1 x 20))<sub>10</sub></td>
+  
+  </tr>
+  <tr>
+    <td >Step 2</td>
+    <td >
+      10101<sub>2</sub>
+     </td>
+     <td >
+      (16 + 0 + 4 + 0 + 1)<sub>10</sub>
+     </td>
+  
+  </tr>
+  <tr>
+    <td >Step 3</td>
+    <td >
+      10101<sub>2</sub>
+</td>
+<td >
+  2110
+  </td>
+  
+  </tr>
+ 
+</table>
+
+<br><br>
+<u>Octal Number System</u>
+<br>
+Characteristics of the octal number system are as follows −
+<br>
+- Uses eight digits, 0,1,2,3,4,5,6,7
+<br>
+- Also called as base 8 number system
+<br>
+- Each position in an octal number represents a 0 power of the base (8). Example 80
+<br>
+- Last position in an octal number represents a x power of the base (8). Example 8x where x represents the last position - 1
+<br><br>
+<b>Example</b>
+Octal Number: 125708
+<br>
+Calculating Decimal Equivalent −
+<br>
+  <br>
+<table  class="number">
+  <thead>
+    <tr>
+      <th scope="col">Step</th>
+      <th scope="col">Octal Number</th>
+      <th scope="col">Decimal Number</th>
+    </tr>
+  </thead>
+  <tr>
+    <td >Step 1</td>
+    <td >12570<sub>8</sub></td>
+    <td >((1 x 24) + (0 x 23) + (1 x 22) + (0 x 21) + (1 x 20))10</td>
+  
+  </tr>
+  <tr>
+    <td >Step 2</td>
+    <td >
+      12570<sub>8</sub>
+     </td>
+     <td >
+      (16 + 0 + 4 + 0 + 1)10
+     </td>
+  
+  </tr>
+  <tr>
+    <td >Step 3</td>
+    <td >
+      12570<sub>8</sub>
+</td>
+<td >
+  2110
+  </td>
+  
+  </tr>
+ 
+</table>
+<br><br>
+<u>Hexadecimal Number System</u>
+<br>
+Characteristics of hexadecimal number system are as follows −
+<br>
+Uses 10 digits and 6 letters, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+<br>
+Letters represent the numbers starting from 10. A = 10. B = 11, C = 12, D = 13, E = 14, F = 15
+<br>
+Also called as base 16 number system
+<br>
+Each position in a hexadecimal number represents a 0 power of the base (16). Example, 160
+<br>
+Last position in a hexadecimal number represents a x power of the base (16). Example 16x where x represents the last position - 1
+<br><br>
+<b>Example</b>
+<br>
+Hexadecimal Number: 19FDE16
+<br>
+Calculating Decimal Equivalent −
+<br><br>
+<table  class="number">
+  <thead>
+    <tr>
+      <th scope="col">Step</th>
+      <th scope="col">Hexadecimal Number</th>
+      <th scope="col">Decimal Number</th>
+    </tr>
+  </thead>
+  <tr>
+    <td >Step 1</td>
+    <td >19FDE<sub>16</sub></td>
+    <td >((1 x 164) + (9 x 163) + (F x 162) + (D x 161) + (E x 160))<sub>10</sub></td>
+  
+  </tr>
+  <tr>
+    <td >Step 2</td>
+    <td >
+      19FDE<sub>16</sub>
+     </td>
+     <td >
+      ((1 x 164) + (9 x 163) + (15 x 162) + (13 x 161) + (14 x 160))<sub>10</sub>
+     </td>
+  
+  </tr>
+  <tr>
+    <td >Step 3</td>
+    <td >
+      19FDE<sub>16</sub>
+</td>
+<td >
+  (65536+ 36864 + 3840 + 208 + 14)<sub>10</sub>
+  </td>
+  
+  </tr>
+  <tr>
+    <td >Step 4</td>
+    <td >
+      19FDE<sub>16</sub>
+</td>
+<td >
+  106462<sub>10</sub>
+  </td>
+  
+  </tr>
+ 
+</table>
+<br><br>
+<u>1.6 Operation on numbers</u>:-Operation on numbers for any given number the operation of addition subtraction are fundamentals. Here is an example to show simple addition on binary number
+<br><br>
+Example 6: Consider the operation 145 +256
+<br>
+145+256=401
+<br><br>
+The simple principles apply to binary addition.
+<br><br>
+
+<table  class="number">
+  <thead>
+    <tr>
+      <th scope="col">Rule</th>
+      <th scope="col">Step</th>
+      <th scope="col">Result</th>
+      <th scope="col">Carry</th>
+
+    </tr>
+  </thead>
+  <tr>
+    <td >1</td>
+    <td >0+0</td>
+    <td >0</td>
+    <td>0</td>
+  
+  </tr>
+  <tr>
+    <td >2</td>
+    <td >
+     0+1
+     </td>
+     <td > 1</td>
+  <td>0</td>
+  </tr>
+  <tr>
+    <td >3</td>
+    <td > 1+0</td>
+<td>1</td>
+  <td>0</td>
+  </tr>
+  <tr>
+    <td > 4</td>
+    <td> 1+1</td>
+    <td >
+0
+  </td>
+  <td>1</td>
+  </tr>
+ 
+</table>
+  </p>
+</div>
+<hr>
+</section>
+     
+</body>
+</html>

@@ -1,0 +1,852 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tally notes</title>
+        <style>
+       html{
+        scroll-behavior: smooth;
+       }
+            body {
+      margin: 0;
+      color: #222222;
+      font-size: 1em;
+      font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    }
+    html{
+     
+        scroll-behavior: smooth;
+      
+       
+    }
+    
+    /*---------- heading ----------- */
+    .masthead {
+        padding: 15em 0;
+        background-image: url("images/tally-head.png" );
+       
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-top: 1em solid #ffcf33;
+       
+        
+    }
+    
+    .masthead-heading {
+      font-size: 6em;
+      font-family: "Open Sans", "Helvetica Neue", sans-serif;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      text-shadow: 1.5px 3px 0px #edc647;
+      color: #F7E199;
+      margin-top: -0.2em;
+    
+    }
+    .masthead-intro {
+      font-size: 2em;
+      font-family: "Gentium Book Basic", Georgia, serif;
+      text-align: center;
+      color: #e5e5e5;
+      margin-bottom: 0.1em;
+    }
+    
+    /*---------- section ----------- */
+    .intro,
+    .where-Im-from,
+    .more-about-me {
+      max-width: 38em;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2em;
+      text-align: left;
+    }
+    
+    .bold {
+      font-weight: bold;
+    }
+    
+    .intro > p,
+    .where-Im-from > p,
+    .more-about-me > p {
+      font-weight: 300;
+      letter-spacing: 0.05em;
+    }
+    
+    section > h1 {
+      font-size: 30px;
+      font-family: sans-serif;
+      font-weight: bold;
+      margin-bottom: 50px;
+      padding-top: 30px;
+    }
+    
+    .more-about-me > h2 {
+      font-size: 1.2em;
+      font-family: "Gentium Book Basic";
+      font-weight: bold;
+      color: #f7e199;
+    }
+    
+    /*---------- footer ----------- */
+    .content-footer {
+      margin-top: 8em;
+      padding-top: 4em;
+      padding-bottom: 4em;
+      background-color: #ffcf33;
+    }
+    
+    .content-footer > p {
+      font-weight: 300;
+      text-align: center;
+      letter-spacing: 0.05em;
+      font-family: "Open Sans"
+    }
+    
+    footer > ul {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+    
+    footer ul li {
+      list-style-type: none;
+      display: inline;
+    }
+    
+    .content-footer a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    
+    a:hover {
+      color: #000;
+    }
+    
+    
+       h2{
+        text-align: center;
+       }
+       a{
+        text-decoration: none;
+       }
+    
+       .whatsapp_float{
+    
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    }
+    button{
+        background-color: orangered;
+        color: white;
+        border: orangered;
+        width: 110px;
+        height: 50px;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    /*
+    Table
+    */
+    table {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      margin: 0;
+      padding: 0;
+    
+      table-layout: fixed;
+    }
+    
+    table caption {
+      font-size: 1.5em;
+      margin: .5em 0 .75em;
+    }
+    
+    table tr {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      padding: .35em;
+    }
+    
+    table th,
+    table td {
+      padding: .625em;
+      text-align: center;
+    }
+    
+    table th {
+      font-size: .85em;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    
+    
+    
+    
+    /* general styling */
+    body {
+      font-family: "Open Sans", sans-serif;
+      font-size: 25px;
+      
+    }
+    .form{
+        text-align: center;
+    }
+    p{
+        font-size: 25px;
+    }
+    
+    
+    
+    /* Dropdown */
+    
+    
+    
+    .dropdown {
+      
+      width: 230px;
+      display: inline-block;
+      margin-right: 10px;
+      position: relative;
+    }
+    .dropdown.toggle > input {
+      display: none;
+    }
+    .dropdown > a, .dropdown.toggle > label {
+      border-radius: 2px;
+      box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+    }
+    .dropdown > a::after, .dropdown.toggle > label::after {
+      content: "";
+      float: right;
+      margin: 15px 15px 0 0;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 10px solid #CCC;
+    }
+    .dropdown ul {
+      list-style-type: none;
+      display: block;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      width: 100%;
+      box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+      overflow: hidden;
+    }
+    .dropdown a, .dropdown.toggle > label {
+      display: block;
+      padding: 0 0 0 10px;
+      text-decoration: none;
+      line-height: 40px;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: white;
+      background:orangered;
+    }
+    .dropdown li {
+      height: 0;
+      overflow: hidden;
+      transition: all 500ms;
+    }
+    .dropdown.hover li {
+      transition-delay: 300ms;
+    }
+    .dropdown li:first-child a {
+      border-radius: 2px 2px 0 0;
+    }
+    .dropdown li:last-child a {
+      border-radius: 0 0 2px 2px;
+    }
+    .dropdown li:first-child a::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #FFF;
+      margin: -10px 0 0 30px;
+    }
+    .dropdown a:hover, .dropdown.toggle > label:hover, .dropdown.toggle > input:checked ~ label {
+      background-color: gold;
+      color: black;
+    }
+    .dropdown > a:hover::after, .dropdown.toggle > label:hover::after, .dropdown.toggle > input:checked ~ label::after {
+      border-top-color: #AAA;
+    }
+    .dropdown li:first-child a:hover::before {
+      border-bottom-color: #EEE;
+    }
+    .dropdown.hover:hover li, .dropdown.toggle > input:checked ~ ul li {          
+      height: 40px;
+    }
+    .dropdown.hover:hover li:first-child, .dropdown.toggle > input:checked ~ ul li:first-child {
+      padding-top: 15px;
+    }
+    
+    /*
+    UP Button
+    */
+    .up_float_btn{
+    
+    position: fixed;
+    bottom: 40px;
+    left: 10px;
+    }
+    .btn-1{
+        background-color: orangered;
+        color: white;
+        border: orangered;
+        width: 110px;
+        height: 50px;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    .ms-header{
+      text-align: center;
+      background-color: gold;
+      height: 50px;
+    }
+    .mark-table{
+      font-size: 15px;
+    text-align: center;
+    
+    }
+    
+    
+    .mark-head{
+      text-align: center;
+      font-size: 25px;
+    }
+    .market-table{
+      font-size: 20px;
+    }
+    
+    #Salary{
+      font-size: 20px;
+    }
+    
+    #Line-Diagram{
+      font-size: 20px;
+    }
+    .photoshop-head{
+      text-align: center;
+      background: gold;
+      height: 50px;
+    }
+    hr{
+      color: #000;
+      height: 5px;
+      background-color: black;
+    }
+    .photoshop-head{
+      text-align: center;
+      background: gold;
+      height: 50px;
+    }
+       </style>
+    </head>
+    <body>
+        
+        
+        <div class="whatsapp_float">
+            <a href="index2.html" class="whatsapp_float_btn">
+                    <button>Back</button> </a>
+                </div>
+                <div class="up_float">
+                    <a href="#h2" class="up_float_btn">
+                            <button class="btn-1">Up</button> </a>
+                        </div>
+      <h2 id="h2">INFOTECH COMPUTER EDUCATION CENTRE</h2>
+        <header class="masthead">
+            <p class="masthead-intro"></p>
+            <h1 class="masthead-heading"></h1>
+          </header>
+          <section class="intro" id="up">
+            <!-----------DropDown-->
+       <center>
+        
+        <nav>
+          <div class="dropdown hover" id="up3">
+            <a href="#up3" class="drop1">Select Topic</a>
+            <ul>
+              <li><a href="#basic">Basic terms of Accounting</a></li>
+              <li><a href="#Traditional">Traditional Approach</a></li>
+              <li><a href="#Division">SUB-DIVISION OF JOURNAL</a></li>
+              <li><a href="#Voucher">VOUCHER IN TALLY</a></li>
+            
+            </ul>
+          </div>
+          </nav>
+          </center>
+          <!------------Adobe Photoshop-->
+         <div id="tally">
+            <h3 class="photoshop-head">Tally With Gst</h3>
+     <p>
+       <u> What is Accounting</u>
+       <br>
+Accounting is the process of recording, Classifying, summarizing, analyzing and interpreting financial transaction and Communicating the result there of to the person interested in such information.
+<br>
+Accounting Process
+<br>
+I)	Identifying the business transaction
+<br>
+II)	Classifying the business transaction 
+<br>
+III)	Recording the business transaction 
+<br> 
+IV)	Summarizing the business transaction
+<br>
+V)	Interpreting the business transaction  
+<br><br>
+<u>Function of accounting system:</u>
+<br>
+	There are five functions of accounting system:- 
+    <br>
+1.	Recording
+<br>
+2.	Classifying
+<br>
+3.	Summarizing
+<br>
+4.	Analysis and interpreting
+<br>
+5. Communication
+<br><br>
+1.	Recording: - The main function is to identify business trisection and record then in appropriate books and accounts in a systematic manner. Recording is originally done in a called Journal. 
+<br><br>
+2.	Classifying: - It is the process of groping of entries of similar nature in one place. The classification in done in a book called ledger. In ledger trisection of similar nature are group under an accounted.   
+<br><br>
+3.	Summarizing: - Summarizing is the process of presenting the classified the data in a manner understandable to the users like manager, banker, creditor life. It involved the preparation of profitable, loss account and balance sheet.
+<br><br>
+4.	Analyses and Interpretation:-   The result of financial statements like profit, a loss account and balance sheet are analyses in such way that the user can make a meaning full Conclusion about the financial position of the business.
+<br><br>
+5.	Communication:- The accounting information to be Communicated in a proper from to the persons interested in appropriate time
+
+<hr>
+<!--------Basic terms used in Accounting------->
+<div id="basic">
+<b>Basic terms used in Accounting </b> 
+<br><br>
+		The basic terms widely used it accounting are explained-
+        <br><br>
+1)	Asset:- The valuable things or properties owned by the business are called assets. Assets are broadly classified in to Fixed Asset and Current Assets.
+<br><br>
+a)	Fixed Asset:-  The long terms used in business which are acquired called fixed asset. For Example. - Land and building, Machinery etc.
+<br><br>
+b)	Current Assets:- Current Assets which are help for short period are called current assets. For example- cash in hand , cash at bank, stock etc.
+<br><br>
+2) Liabilities:-
+Liabilities are obligation payable by the interprets in future  in the from of money or goods . There are two types of liabilities in accounting system-
+<br>
+i)	Short terms liabilities and
+<br>
+ii)	Long  terms liabilities
+<br><br>
+a)	Short terms liabilities:-
+These are liabilities which became due and payable with in a period of one year. Ex- Creditors, bill payable, outstanding expenses etc.
+<br><br>
+b)	Long  terms liabilities:
+There are liabilities which are payable after a long period. Ex- Long terms loan.
+<br><br>
+ 3. Capital:- 
+	Capital is the money which is invests in the business by the owner.
+    <br><br>
+4.	Revenue:-
+There are amounts earned by a business man concerned by selling to its customer. The common items of revenue are sales, commission received, and rent received etc.
+<br><br>
+5.	Expenses;- Expenses are the amount spent in the process of earning income.
+ There are two types of expenses-
+ <br><br>
+i)	Capital Expenditure:- capital expenditure is the amount spent for acquiring a fixed assets or for increasing the earning capacity of a business.
+<br><br>
+ii)	Revenue Expenditure:- Revenue Expenditure are that system which the benefit last for a period up to one year. For exam- Payment of Salary, Telephone bill.
+<br><br>
+6.	Purchase:-
+The total amount of goods Purchased by a business concern for Cash or Credit for the purpose of sell or use in business is known as Purchase.
+<br><br>
+7.	Sales :-
+It is the amount relished from the sale of goods; sales may be cash sales or credit sales.
+<br><br>
+8.	  Creditors:- 
+Creditors are persons who have clime for money against the business for goods supplied on credit. Creditors are also referred to as account payable.
+<br><br>
+9.	Debtors:-
+Debtors are persons who own money to the business for goods sold on credit. Debtors are also referred to as accounts receivables. 
+<br><br>
+
+10.	Stock:-
+ 		The goods available with the business for sale on a particular date termed as stock. The value of goods remaining unsold at the end of an accounting period is termed as closing stock and at the beginning of an accounting period is termed as opening stock.
+        <br><br>
+11.	Drawing:-
+Drawings are withdrawals of goods or cash from the business by the proprietor for personal use.
+<br><br>
+12.	Business Transaction
+       A business transaction is a dealing which has an impact on the business. A transaction may be either cash or credit. If a transaction involves immediate receipt or payment of money, it is called cash transaction. If payment is postponed to a feature date, it is called credit transaction
+</div>
+<hr>
+<!--------Traditional or English Approach--------->
+<div id="Traditional">
+<b>Traditional or English Approach</b>
+<br><br>
+In the conventional approach accounts are classified into three. They are-
+<br>
+1.	Personal A/c
+<br>
+2.	Real A/c
+<br>
+3.	Nominal A/c
+<br><br>
+1.	Personal A/c:- 
+br
+Personal A/c are accounts of persons, firms or companies with whom the business deals. Example Anil’s.
+<br><br>
+2.	Real A/c:-
+<br> Real A/c are accounts of assets or properties. Example cash Account, Furniture Account, Building Account, Goodwill Account etc.
+<br><br>
+3.	Nominal A/c:-
+<br>
+ These account related to all tomes expenses, incomes, losses and gains. Example: - salary account, rent account, commission account etc.
+<br><br>
+<u>Rules of accounting</u>
+<br>
+The rules for debit and credit of various accounts are:-
+<br>
+1.	Personal accounts: - Debit the receiver, Credit is giver.
+<br>
+2.	Real accounts: - Debit what comes in, Credit what goes out.
+<br>
+3.	Nominal accounts: - debit all expenses and losses, credit all incomes and gains.
+<br>
+4.	Assets: - Debit increase in the assets, Credit decrease in the assets.
+<br>
+5.	Liabilities: - Debit decrease in the liability, Credit increase in the liability.
+<br>
+6.	Capital: - Debit decrease in capital, Credit increase in capital.
+<br>
+7.	Expenses and losses: - Debit increase in expenses and losses, Credit decrease in Expenses and losses.
+<br>
+8.	Revenue and Profit: - Debit decrease in revenue and profit, Credit increase in revenue and profit.
+<br><br>
+<u>Double entry system of book keeping</u>
+<br>
+       Business transaction are recorded in the books of the basis of double entry system. This system was invented by Luca Pacioli Italy and was developed to the present form in England. According to this system both the aspects of a transaction i.e. the debit aspect and credit aspect are recorded in the books of accounts. This helps in preparing Trial balance, Trading and profit and loss account and balance sheet.
+       <br><br>
+<u>Journal</u>
+<br>
+    Journal is a book of original entry in which transactions are first recorded in the order in which they occur. The process of recording transaction in a journal is termed as journalizing and the transactions entered in the journal are called journal enters.
+<br><br>
+<u>Treatment of Discount</u>
+<br>
+    Discount is reduction allowed on selling price of goods or on the amount due. There are two types of discounts. They are:-
+    <br>
+1.	Trade discount:- It is a deduction from the list price of goods. Trade discount is deducted from the invoice from the list price and the net amount only is recorded in the books of accounts. No separate journal entry is required to record trade discount.
+<br>
+2.	Cash discount:- It is a reduction allowed by creditors to debtors on making prompt payment. The journal entry will be:-
+<br>
+           Cash A/C Dr
+           <br>
+           Discount A/C Dr  To X’s A/C
+           <br><br>
+<u>Opening entry</u>
+<br>
+     The journal entry passed for bringing the assets and liabilities of a running business from the previous year to the current year is called an opening entry. Here the opening balances of all assets are debited and liabilities are credited. The excess of assets over liabilities is the proprietors capital and is credited to his capital account.
+<br><br>
+<u>Ledger</u>
+<br>
+A ledger is the most important book in an organization. It may be in the form of bound register or cards or separate sheets may be maintained in a loose leaf binder. A ledger is defined as a collection of all the accounts debited or credited in the general journal. It contains a summarized record of all the transaction of the period. It gives a clear idea about the net result of a group of transactions at a glance. Usually ledger accounts are classified into four categories viz. assets, liabilities, capital, revenue and expenses. The format of an account is given below.
+<br><br>
+<u>Posting</u>
+<br>
+         Posting is the process of transferring entries from journal to the ledger. In other words, it is the grouping of all the transaction in respect of one particular account at one place further accounting process. 
+<br><br>
+<u>Balance of accounting </u>
+<br>
+         Balance is the process of ascertaining the  difference between the totals of debit side and the credit side of the account and inserting the difference on the side where the amount is less in order to make the totals of the account equal. The words ‘balance c/d’ are written against the amount of the difference between the two sides. Usually accounts are balanced at the end every accounting year. The amount of balance is brought down (b/d) to the next accounting year.
+<br><br>
+<u>Trial Balance</u>
+<br>
+         The Trial Balance is a statement showing the balance of all ledger accounts. It is prepared to know the arithmetical accuracy of ledger accounts. If total of the debit balances is equal the total of credit balances, it is presume that there is no mistake and balancing. The format of Trial balance is as follows.
+
+<hr>
+<!------SUB-DIVISION OF JOURNAL----------->
+<div id="Division">
+<b>SUB-DIVISION OF JOURNAL</b>
+<br><br>
+	In the case of large business organizations it is inconvenient to maintain the record of all the transactions in one journal. Therefore, they usually maintain separate journals for recording transactions of similar nature. Such journals are called special journals or daybooks. The division of original journal into different daybooks is called the sub division of journal. The important special journals are:
+    <br>
+1.	Cash Book
+<br>
+2.	Purchases day Book
+<br>
+3.	 Sales day Book
+<br>
+4.	Purchases return day Book
+<br>
+5.	Sales return day Book
+<br><br>
+<u>Cash Book-</u>
+<br>
+It is an important book maintained in all organization. It serves the purpose of both a journal and a ledger account. Cash book is used to record all transaction relating to cash receipts and cash payments. The different types cash book are- 
+<br>
+a.	Single Column Cash Book
+<br>
+b.	Double Column Cash Book
+<br>
+c.	Three Column Cash Book
+<br>
+d.	Petty Cash Book  
+<br><br>
+<u>Single Column Cash Book:-</u>
+<br>
+	A cash book which contains only one column of amount on each side is called Single Column Cash Book. All cash receipts are recorded on the debit side and all cash payments are recorded on the credit side. Transactions by cheques are also treated as equivalent to cash transaction and are entered in the single column cash book.
+     <br><br>
+    <u>Double column Cash Book:</u>
+    <br>
+		A cash book which contains two columns of amount on each side ic. One column. For Cash and another column for bank is called double column cash book. All payments into, the bank are recorded in, the bank column on the debit side and all withdrawals from the bank are recorded in the bank column on the credit side.
+<br><br>
+        <u>Contra Entries:</u>
+        <br>
+	There are certain transactions which come both on the debit side and credit side of the cash book. Deposit of cash and cheque in to the bank and withdrawals of cash from bank for business use are such transaction. The entries that   affect the debit and credit sides of the cash book are called contra entries.
+    <br> <br>
+<u>Three- Column Cash Book (Discount , Cash and Bank Columns) :</u>
+<br>
+	A three column cash book contains three amount columns on each side discount, cash and bank book columns. The discount column is for recording discount allowed and received, cash column for ‘recording cash receipts and payments bank column for recording deposits and withdrawals from bank.       
+<br><br>
+
+<u>Petty Cash Book :</u>
+<br>
+	In every business organization, there are a large number of small payments repetitive nature such as Postage, stationary, carriage, etc are made. If all these payments are handled by the main cashier and are recorded in the main cash book, it will consume a lot of his valuable time. To avoid this petty cashier is entrusted with the duty of making small payments, the book maintained b71, petty cashier to record such payments are called petty cash book.
+    <br>
+	The petty cash book is usually maintained under imprested system. Under imprested system a-fixed amount as advanced to the petty cashier at the beginning of the period. At the end of the period he submits a statement showing the amount spent during the period. The main cashier after examining the statement reimburses the amount spent to the petty cashier. 
+    </div>
+    </div>
+    <hr>
+    <!----------Some important Voucher using Tally---------->
+    <div id="Voucher">
+<b>Some important Voucher using Tally</b>
+<br><br>
+1.	Payment Voucher: - Payment voucher means the payment of any amount of each system either against purchasing Item or any cash on relating transaction of amount.
+<br>
+2.	Receipt Voucher: - Receipt voucher is Collection of any amount by defined a transactions with a creditor on sales or any other purpose.               	 Suppose a customer buys any item from any manufacture or any company or shops the makes the payment on cash. Then it should have to enter on receipt voucher for the seller.
+<br>
+3.	Sales Voucher: - Sales voucher when a company or shop sold my item to a customer it called sales voucher.
+<br>
+4.	Purchase Voucher: - Purchase voucher is that voucher which show the fall percent of amount keeps balance on purchasing any item from a source.
+<br>
+5.	Contra Voucher: - Contra voucher is called when a company makes transaction to the bank on deposit or withdrawals or any other purpose.
+<br>
+
+<center>
+<table  class="number">
+    <thead>
+      <tr>
+        <th scope="col">Ledger</th>
+        <th scope="col">Group</th>
+      </tr>
+    </thead>
+    <tr>
+      <td >SBI</td>
+      <td >Bank Account</td>
+     
+    </tr>
+    <tr>
+      <td >Mr. X</td>
+      <td >Capital Account</td>
+      
+    </tr>
+    <tr>
+      <td >Electrician Bill</td>
+      <td > Indirect Expenses</td>
+ 
+    </tr>
+    <tr>
+      <td > Computer</td>
+      <td> Indirect Expenses</td>
+  
+    </tr>
+    <tr>
+        <td > Purchase</td>
+        <td> Purchase Account</td>
+    
+      </tr>
+      <tr>
+        <td > Land Security</td>
+        <td> Loan and Advance</td>
+    
+      </tr>
+      <tr>
+        <td > Sales</td>
+        <td> Sales Account</td>
+    
+      </tr>
+      <tr>
+        <td > Traveling</td>
+        <td> Indirect Expenses</td>
+    
+      </tr>
+      <tr>
+        <td > Sales Tax</td>
+        <td> Indirect Expenses</td>
+    
+      </tr>
+      <tr>
+        <td > Profit & Loss A/c</td>
+        <td> Current Assets</td>
+    
+      </tr>
+      <tr>
+        <td > Medical Expense</td>
+        <td> Indirect Expenses</td>
+    
+      </tr>
+      <tr>
+        <td > Interest on Capital</td>
+        <td> Indirect Expenses</td>
+    
+      </tr>
+      <tr>
+        <td > Depreciation</td>
+        <td> Indirect Expenses</td>
+    
+      </tr>
+      <tr>
+        <td > Discount Receipt</td>
+        <td> Indirect Expenses</td>
+    
+      </tr>
+      <tr>
+        <td > Discount Allow</td>
+        <td> Indirect Expenses</td>
+    
+      </tr>
+      <tr>
+        <td > Prity Computer Center</td>
+        <td>Sundry Debtor</td>
+    
+      </tr>
+      <tr>
+        <td > Insurance Premium</td>
+        <td> Indirect Expenses</td>
+    
+      </tr>
+      <tr>
+
+        <td > Office Stationary</td>
+        <td> Indirect Expenses</td>
+    
+      </tr>
+      <tr>
+        <td > Fitting Charge</td>
+        <td> Indirect Expenses</td>
+    
+      </tr>
+      <tr>
+        <td > Electrical Item</td>
+        <td> Fixed Asset</td>
+    
+      </tr>
+      <tr>
+        <td > Registration Fees</td>
+        <td> Indirect Expenses</td>
+    
+      </tr>
+      <tr>
+        <td > Service Charge</td>
+        <td> Indirect Expenses</td>
+      </tr>
+      <tr>
+        <td > House Rent</td>
+        <td> Indirect Expenses</td>
+    
+      </tr>
+      <tr>
+        <td > Mr. ‘X’</td>
+        <td> Sundry Creditor</td>
+    
+      </tr>
+      <tr>
+        <td > Mr. ‘Y’</td>
+        <td> Sundry Debtor</td>
+    
+      </tr>
+      <tr>
+        <td > Stock Destroy</td>
+        <td> Indirect Expenses</td>
+    
+      </tr>
+      <tr>
+        <td > Sales Return</td>
+        <td> Sales Account</td>
+    
+      </tr>
+      <tr>
+        <td > Transport Charge</td>
+        <td> Indirect Expenses</td>
+    
+      </tr>
+      <tr>
+        <td > Purchase Return</td>
+        <td> Purchase Account</td>
+    
+      </tr>
+  </table>
+</center>
+</div>
+
+<hr>
+<!--------BANK RECONCILIATION STATEMENT--------->
+<u><b>BANK RECONCILIATION STATEMENT</b></u>
+<br>
+Bank Reconciliation Statement is a statement prepared to know flee causes of different between   the balance as per cash book and bank passbook on a particular date. The bank reconciliation statement have great importance in the present day business because most of the business transactions are settled through bank. The firm maintains a cash book and bank maintains a pass book to record these transactions. Both these books should show the same balance. But in actual practical the balance shown in the cash book is different from that of the pass book. Therefore, a bank reconciliation statement is prepared to know the reasons for difference.
+<br>
+Causes of Difference between the Balance if Cash Book and Pass Book
+<br><br>
+1.	Cheques issued but not yet presented for payment
+When a Cheque issued it is immediately recorded in the cash book. But the same will be recorded in the pass book only when it is actually presented in the bank for payment. If accounts are closed before presentation of cheque to the bank, there will be difference between the balance as per cash book and pass book.
+<br><br>
+2.	Cheques paid into the bank but not yet collected
+When a Cheque is deposited into the bank for collection, it will be recorded immediately in the cash book. But the bank will credit the amount only when the cheque is collected. If accounts are closed in the intervening period there will be difference between these two balances.
+<br><br>
+3.	Direct payment by a customer to the bank
+When a customer makes payment directly to the bank account of the trader, it will be immediately credited in his pass book. If it remains unrecorded in the cash book, the balance as per pass book will be more than the balance as per cash book.
+<br><br>
+4.	Interest credited by the bank
+Bank allows interest on the deposit and credits the amount in the  pass book  But the same is usually remains unrecorded in the cash book. In such a case, the pass book balance will be more than the cash book balance.
+<br><br>
+5.	Interest and expenses changed by the bank
+Interest on overdraft, bank charges, etc. debited in the pass book are immediately recorded in the cash book . As these items are not entered in the cash books, its balance will be more than the balance of the pass
+  
+
+ 
+
+     </p>
+         </div>
+         
+    </section>
+    
+    <script>// close the toggle menu if user clicks outside of the menu
+    
+      $(document).click(function(event) {
+        if(
+          $('.toggle > input').is(':checked') &&
+          !$(event.target).parents('.toggle').is('.toggle')
+        ) {
+          $('.toggle > input').prop('checked', false);
+        }
+      })</script>
+    
+    </body>
+    </html>

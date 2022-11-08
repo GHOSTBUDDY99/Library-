@@ -1,0 +1,442 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Java notes</title>
+        <style>
+       html{
+        scroll-behavior: smooth;
+       }
+            body {
+      margin: 0;
+      color: #222222;
+      font-size: 1em;
+      font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    }
+    html{
+     
+        scroll-behavior: smooth;
+      
+       
+    }
+    
+    /*---------- heading ----------- */
+    .masthead {
+        padding: 15em 0;
+        background-image: url("images/java-head.png" );
+       
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-top: 1em solid #ffcf33;
+       
+        
+    }
+    
+    .masthead-heading {
+      font-size: 6em;
+      font-family: "Open Sans", "Helvetica Neue", sans-serif;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      text-shadow: 1.5px 3px 0px #edc647;
+      color: #F7E199;
+      margin-top: -0.2em;
+    
+    }
+    .masthead-intro {
+      font-size: 2em;
+      font-family: "Gentium Book Basic", Georgia, serif;
+      text-align: center;
+      color: #e5e5e5;
+      margin-bottom: 0.1em;
+    }
+    
+    /*---------- section ----------- */
+    .intro,
+    .where-Im-from,
+    .more-about-me {
+      max-width: 38em;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2em;
+      text-align: left;
+    }
+    
+    .bold {
+      font-weight: bold;
+    }
+    
+    .intro > p,
+    .where-Im-from > p,
+    .more-about-me > p {
+      font-weight: 300;
+      letter-spacing: 0.05em;
+    }
+    
+    section > h1 {
+      font-size: 30px;
+      font-family: sans-serif;
+      font-weight: bold;
+      margin-bottom: 50px;
+      padding-top: 30px;
+    }
+    
+    .more-about-me > h2 {
+      font-size: 1.2em;
+      font-family: "Gentium Book Basic";
+      font-weight: bold;
+      color: #f7e199;
+    }
+    
+    /*---------- footer ----------- */
+    .content-footer {
+      margin-top: 8em;
+      padding-top: 4em;
+      padding-bottom: 4em;
+      background-color: #ffcf33;
+    }
+    
+    .content-footer > p {
+      font-weight: 300;
+      text-align: center;
+      letter-spacing: 0.05em;
+      font-family: "Open Sans"
+    }
+    
+    footer > ul {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+    
+    footer ul li {
+      list-style-type: none;
+      display: inline;
+    }
+    
+    .content-footer a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    
+    a:hover {
+      color: #000;
+    }
+    
+    
+       h2{
+        text-align: center;
+       }
+       a{
+        text-decoration: none;
+       }
+    
+       .whatsapp_float{
+    
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    }
+    button{
+        background-color: orangered;
+        color: white;
+        border: orangered;
+        width: 110px;
+        height: 50px;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    /*
+    Table
+    */
+    table {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      margin: 0;
+      padding: 0;
+    
+      table-layout: fixed;
+    }
+    
+    table caption {
+      font-size: 1.5em;
+      margin: .5em 0 .75em;
+    }
+    
+    table tr {
+      background-color: #f8f8f8;
+      border: 1px solid #ddd;
+      padding: .35em;
+    }
+    
+    table th,
+    table td {
+      padding: .625em;
+      text-align: center;
+    }
+    
+    table th {
+      font-size: .85em;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    
+    
+    
+    
+    /* general styling */
+    body {
+      font-family: "Open Sans", sans-serif;
+      font-size: 25px;
+      
+    }
+    .form{
+        text-align: center;
+    }
+    p{
+        font-size: 25px;
+    }
+    
+    
+    
+    /* Dropdown */
+    
+    
+    
+    .dropdown {
+      
+      width: 230px;
+      display: inline-block;
+      margin-right: 10px;
+      position: relative;
+    }
+    .dropdown.toggle > input {
+      display: none;
+    }
+    .dropdown > a, .dropdown.toggle > label {
+      border-radius: 2px;
+      box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+    }
+    .dropdown > a::after, .dropdown.toggle > label::after {
+      content: "";
+      float: right;
+      margin: 15px 15px 0 0;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 10px solid #CCC;
+    }
+    .dropdown ul {
+      list-style-type: none;
+      display: block;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      width: 100%;
+      box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+      overflow: hidden;
+    }
+    .dropdown a, .dropdown.toggle > label {
+      display: block;
+      padding: 0 0 0 10px;
+      text-decoration: none;
+      line-height: 40px;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: white;
+      background:orangered;
+    }
+    .dropdown li {
+      height: 0;
+      overflow: hidden;
+      transition: all 500ms;
+    }
+    .dropdown.hover li {
+      transition-delay: 300ms;
+    }
+    .dropdown li:first-child a {
+      border-radius: 2px 2px 0 0;
+    }
+    .dropdown li:last-child a {
+      border-radius: 0 0 2px 2px;
+    }
+    .dropdown li:first-child a::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #FFF;
+      margin: -10px 0 0 30px;
+    }
+    .dropdown a:hover, .dropdown.toggle > label:hover, .dropdown.toggle > input:checked ~ label {
+      background-color: gold;
+      color: black;
+    }
+    .dropdown > a:hover::after, .dropdown.toggle > label:hover::after, .dropdown.toggle > input:checked ~ label::after {
+      border-top-color: #AAA;
+    }
+    .dropdown li:first-child a:hover::before {
+      border-bottom-color: #EEE;
+    }
+    .dropdown.hover:hover li, .dropdown.toggle > input:checked ~ ul li {          
+      height: 40px;
+    }
+    .dropdown.hover:hover li:first-child, .dropdown.toggle > input:checked ~ ul li:first-child {
+      padding-top: 15px;
+    }
+    
+    /*
+    UP Button
+    */
+    .up_float_btn{
+    
+    position: fixed;
+    bottom: 40px;
+    left: 10px;
+    }
+    .btn-1{
+        background-color: orangered;
+        color: white;
+        border: orangered;
+        width: 110px;
+        height: 50px;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    .ms-header{
+      text-align: center;
+      background-color: gold;
+      height: 50px;
+    }
+    .mark-table{
+      font-size: 15px;
+    text-align: center;
+    
+    }
+    
+    
+    .mark-head{
+      text-align: center;
+      font-size: 25px;
+    }
+    .market-table{
+      font-size: 20px;
+    }
+    
+    #Salary{
+      font-size: 20px;
+    }
+    
+    #Line-Diagram{
+      font-size: 20px;
+    }
+    .photoshop-head{
+      text-align: center;
+      background: gold;
+      height: 50px;
+    }
+    hr{
+      color: #000;
+      height: 5px;
+      background-color: black;
+    }
+    .photoshop-head{
+      text-align: center;
+      background: gold;
+      height: 50px;
+    }
+       </style>
+    </head>
+    <body>
+        
+        
+        <div class="whatsapp_float">
+            <a href="index2.html" class="whatsapp_float_btn">
+                    <button>Back</button> </a>
+                </div>
+                <div class="up_float">
+                    <a href="#h2" class="up_float_btn">
+                            <button class="btn-1">Up</button> </a>
+                        </div>
+      <h2 id="h2">INFOTECH COMPUTER EDUCATION CENTRE</h2>
+        <header class="masthead">
+            <p class="masthead-intro"></p>
+            <h1 class="masthead-heading"></h1>
+          </header>
+          <section class="intro" id="up">
+            <!-----------DropDown-->
+       <center>
+        
+        <nav>
+          <div class="dropdown hover" id="up3">
+            <a href="#up3" class="drop1">Select Topic</a>
+            <ul>
+              <li><a href="#photoshop">Adobe Photoshop</a></li>
+              <li><a href="#pagemaker">Adobe Pagemaker</a></li>
+              <li><a href="#Corel-draw">Corel Draw</a></li>
+            
+            </ul>
+          </div>
+          </nav>
+          </center>
+          <!------------Adobe Photoshop-->
+         <div id="c program">
+            <h3 class="photoshop-head">Programming With C</h3>
+     <p>
+    
+        <u>What is C?</u>
+        <br>
+    C is a general-purpose programming language created by Dennis Ritchie at the Bell Laboratories in 1972.
+    <br>
+    It is a very popular language, despite being old.
+    <br>
+    C is strongly associated with UNIX, as it was developed to write the UNIX operating system.
+    <br><br>
+    <u>Why Learn C?</u>
+    <br>
+    It is one of the most popular programming language in the world
+     <br>
+    If you know C, you will have no problem learning other popular programming languages 
+    br
+    such as Java, Python, C++, C#, etc, as the syntax is similar
+    <br>
+    C is very fast, compared to other programming languages, like Java and Python
+    <br>
+    C is very versatile; it can be used in both applications and technologies
+    <br><br>
+    <u>Difference between C and C++</u>
+    <br>
+    C++ was developed as an extension of C, and both languages have almost the same syntax
+    <br>
+    The main difference between C and C++ is that C++ support classes and objects, while C does not
+    
+     </p>
+         </div>
+         
+    </section>
+    
+    <script>// close the toggle menu if user clicks outside of the menu
+    
+      $(document).click(function(event) {
+        if(
+          $('.toggle > input').is(':checked') &&
+          !$(event.target).parents('.toggle').is('.toggle')
+        ) {
+          $('.toggle > input').prop('checked', false);
+        }
+      })</script>
+    </body>
+    </html>
+    </body>
+    </html>

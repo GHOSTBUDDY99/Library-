@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ms office-notes</title>
+    <style>
+   html{
+    scroll-behavior: smooth;
+   }
+        body {
+  margin: 0;
+  color: #222222;
+  font-size: 1em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+html{
+ 
+    scroll-behavior: smooth;
+  
+   
+}
+
+/*---------- heading ----------- */
+.masthead {
+    padding: 15em 0;
+    background-image: url("images/dtp-head.jpg" );
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 1em solid #ffcf33;
+   
+    
+}
+
+.masthead-heading {
+  font-size: 6em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  text-shadow: 1.5px 3px 0px #edc647;
+  color: #F7E199;
+  margin-top: -0.2em;
+
+}
+.masthead-intro {
+  font-size: 2em;
+  font-family: "Gentium Book Basic", Georgia, serif;
+  text-align: center;
+  color: #e5e5e5;
+  margin-bottom: 0.1em;
+}
+
+/*---------- section ----------- */
+.intro,
+.where-Im-from,
+.more-about-me {
+  max-width: 38em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.intro > p,
+.where-Im-from > p,
+.more-about-me > p {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+section > h1 {
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-bottom: 50px;
+  padding-top: 30px;
+}
+
+.more-about-me > h2 {
+  font-size: 1.2em;
+  font-family: "Gentium Book Basic";
+  font-weight: bold;
+  color: #f7e199;
+}
+
+/*---------- footer ----------- */
+.content-footer {
+  margin-top: 8em;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  background-color: #ffcf33;
+}
+
+.content-footer > p {
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-family: "Open Sans"
+}
+
+footer > ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+footer ul li {
+  list-style-type: none;
+  display: inline;
+}
+
+.content-footer a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #000;
+}
+
+
+   h2{
+    text-align: center;
+   }
+   a{
+    text-decoration: none;
+   }
+
+   .whatsapp_float{
+
+position: fixed;
+bottom: 40px;
+right: 10px;
+}
+button{
+    background-color: orangered;
+    color: white;
+    border: orangered;
+    width: 110px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/*
+Table
+*/
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+
+
+
+/* general styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  
+}
+.form{
+    text-align: center;
+}
+p{
+    font-size: 25px;
+}
+
+
+
+/* Dropdown */
+
+
+
+.dropdown {
+  
+  width: 230px;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+.dropdown.toggle > input {
+  display: none;
+}
+.dropdown > a, .dropdown.toggle > label {
+  border-radius: 2px;
+  box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+}
+.dropdown > a::after, .dropdown.toggle > label::after {
+  content: "";
+  float: right;
+  margin: 15px 15px 0 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #CCC;
+}
+.dropdown ul {
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+.dropdown a, .dropdown.toggle > label {
+  display: block;
+  padding: 0 0 0 10px;
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background:orangered;
+}
+.dropdown li {
+  height: 0;
+  overflow: hidden;
+  transition: all 500ms;
+}
+.dropdown.hover li {
+  transition-delay: 300ms;
+}
+.dropdown li:first-child a {
+  border-radius: 2px 2px 0 0;
+}
+.dropdown li:last-child a {
+  border-radius: 0 0 2px 2px;
+}
+.dropdown li:first-child a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #FFF;
+  margin: -10px 0 0 30px;
+}
+.dropdown a:hover, .dropdown.toggle > label:hover, .dropdown.toggle > input:checked ~ label {
+  background-color: gold;
+  color: black;
+}
+.dropdown > a:hover::after, .dropdown.toggle > label:hover::after, .dropdown.toggle > input:checked ~ label::after {
+  border-top-color: #AAA;
+}
+.dropdown li:first-child a:hover::before {
+  border-bottom-color: #EEE;
+}
+.dropdown.hover:hover li, .dropdown.toggle > input:checked ~ ul li {          
+  height: 40px;
+}
+.dropdown.hover:hover li:first-child, .dropdown.toggle > input:checked ~ ul li:first-child {
+  padding-top: 15px;
+}
+
+/*
+UP Button
+*/
+.up_float_btn{
+
+position: fixed;
+bottom: 40px;
+left: 10px;
+}
+.btn-1{
+    background-color: orangered;
+    color: white;
+    border: orangered;
+    width: 110px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.ms-header{
+  text-align: center;
+  background-color: gold;
+  height: 50px;
+}
+.mark-table{
+  font-size: 15px;
+text-align: center;
+
+}
+
+
+.mark-head{
+  text-align: center;
+  font-size: 25px;
+}
+.market-table{
+  font-size: 20px;
+}
+
+#Salary{
+  font-size: 20px;
+}
+
+#Line-Diagram{
+  font-size: 20px;
+}
+.photoshop-head{
+  text-align: center;
+  background: gold;
+  height: 50px;
+}
+hr{
+  color: #000;
+  height: 5px;
+  background-color: black;
+}
+   </style>
+</head>
+<body>
+    
+    
+    <div class="whatsapp_float">
+        <a href="index2.html" class="whatsapp_float_btn">
+                <button>Back</button> </a>
+            </div>
+            <div class="up_float">
+                <a href="#h2" class="up_float_btn">
+                        <button class="btn-1">Up</button> </a>
+                    </div>
+  <h2 id="h2">INFOTECH COMPUTER EDUCATION CENTRE</h2>
+    <header class="masthead">
+        <p class="masthead-intro"></p>
+        <h1 class="masthead-heading"></h1>
+      </header>
+      <section class="intro" id="up">
+        <!-----------DropDown-->
+   <center>
+    
+    <nav>
+      <div class="dropdown hover" id="up3">
+        <a href="#up3" class="drop1">Select Topic</a>
+        <ul>
+          <li><a href="#photoshop">Adobe Photoshop</a></li>
+          <li><a href="#pagemaker">Adobe Pagemaker</a></li>
+          <li><a href="#Corel-draw">Corel Draw</a></li>
+        
+        </ul>
+      </div>
+      </nav>
+      </center>
+      <!------------Adobe Photoshop-->
+     <div id="photoshop">
+        <h3 class="photoshop-head">Adobe Photoshop</h3>
+        <p>
+          <u>The Tool box</u>
+          <br>
+The Tool box is a  set of  tools ,which are  creating image and editing  them in a number of ways --
+<br>
+<u>Marque Selection Tools (M)</u>:
+<br>
+The tools arranged in this fly out are used   for selecting on  rectangular elliptical portion of an image, click on the rectangular marquee tool in the tool box drag  it over image.
+<br><br>
+<u>Move Tool (v) </u>: 
+<br>
+It is used for moving image on a portion of the image from one location to another. Click on the Move tool in the tool box and place in mouse pointer over the image on the select part  of the image. Now drag the mouse pointer to move the selected part of the image to some other Location .If no selection was made, the entire image would have been moved
+<br><br>
+<u>Lasso Tool (L) </u>:
+<br>
+The tools in this tool group are used for making free from selection in an image to make free from selection in an image to make free from selection, click on the lasso tool in the food box. Now place the mouse pointer over the part of image from where you want to start the selection drag the mouse pointer a section lime appears as you drag the mouse pointer. Replace the mouse button at point from where dragging. You start dragging.
+Magic wand (w) The magic wand tool allows to select a constituently coloured area without having to select the outline of an object , click on the magic wand tool in the too box and click on the image .All the adjacent area with the similar colour get selected. 
+<br><br>
+<u>Crop Tool(C)</u>:
+The crop tool is used for trimming an image .In cropping the selected area of the image while rest of the part is removed .To used this tool ,Click an the crop tool in the box and drag the mouse pointer of it. Release the mouse button .Now click am same other tool, a dialog box appear  ,Click on the crop button of the dialog box. The selection portion of the image gets cropped
+<br><br>
+<u>Air Brush Tool (J)</u> :
+These are two painting  tools ,are similar to an ordinary air brush and point brush ,Click on the paint brush tool  in the tools box .The image to draw the colour strokes.
+<br><br>
+<u>Clone stamp and pattern stamp tools(S)</u> :
+<br>
+ These tools allow are to copy a portion of the image over another portion .This is quite useful tool for correction old images .For using these tools select the tools ,say clone stamp tool ,say stamp tool ,Press Alt key keeping the Alt key pressed .Click on the point from  where you have to clone pixels ,move the pointer to move and different location start dragging .When we used this tool on ducky .The resultant image was ducky that bears another hand on it’s .
+ <br><br>
+<u>Eraser Tool(E) </u>:
+<br>
+The Eraser tool works like an ordinary eraser to delete areas from and image. Too see how this tools is used ,Click an the eraser tool and the tool box ,move the mouse pointer to the area that is to be erased and drag the mouse pointer the pixels from the area where you dragged where remover living a hole is ducky tummy.
+Blur Tool- The blur tool blurs pixels of a selected part to import a softening look to the image .To use this tool .Click on the Blur tool in the tool box .Move the mouse pointer to the area from the pixels are to be blurred.
+Type Tool- The type tool used for adding text to an image  ,To add text to the image .Simply click in the type tool ,move the mouse pointer to the desired location and pick the left mouse button .Now type the text. 
+<br><br>
+<u>Eye dropper Tool</u> :
+<br>
+ The eye dropped tool allows case to select the fore grounds or the background colour from an image when you click on the image with the eye dropper tool selected the colour of the area where are clicked becomes the fore ground colour box in the tool box shows the colour of the area image where we clicking with the eye  dropper tool the eye dropper tool becomes the current background colour.
+ <br><br>
+<u>Zoom Tool(Z)</u>:
+<br>
+The zoom tool gives as a zoomed that is enlarged of diminished  view of our image .Select the zoom tool ,Click anywhere on the image .The area of the image of the image which you clicked gets enlarged,
+<br><br>
+<u>Hand Tool(H)</u>:
+<br>
+ When we enlarged size of an image in the image window .Thus to navigate from one part of the image to another ,the hand tool ,click on in the tool box place the mouse pointer on the image and draw into navigation through the image
+
+
+        </p>
+     </div>
+     <hr>
+     <!--------Adobe Pagemaker-->
+     <div id="pagemaker">
+      <h3 class="photoshop-head">Adobe Photoshop</h3>
+      <p>
+       <u> Introduction </u>:
+      Adobe PageMaker 7.0 is the most popular and advanced graphic publication program which is developed by Adobe Corporation of USA. In this program, we can create visiting cards, Wedding cards, news papers, magazines, books, ID cards etc.
+      <br><br>
+<u>Exe or Application file name: pm70.exe</u>
+<br>
+File extension: .pmd
+<br>
+To Open or Load Adobe PageMaker 7.0
+<br>
+Ø  Click on Start > Programs > Adobe > PageMaker 7.0 > Adobe PageMaker 7.0
+Or,
+Ø  Click on Start > Run.
+<br>
+Ø  Type PM70 into the run box.
+<br>
+Ø  Click on Ok.
+<br><br>
+<u>To Create New Document</u>
+<br>
+Ø  Click on File Menu > New (Ctrl+N)
+<br>
+Ø  Specify the Page size (eg. A4 / Letter / A3 / A5 etc), Page Orientation (Tall or Wide), Page Option, Number of pages, Page Margins (Inside / Outside / Top / Bottom), Resolution output and printer default.
+br'
+Ø  Click on Ok.
+<br><br>
+<u>To display current publication in Actual Size</u>
+<br>
+Ø  Right click on publication window.
+<br>
+Ø  Click on Actual Size (Ctrl+1)
+<br><br>
+<u>To display current publication in Fit in Window</u>
+<br>
+Ø  Right click on publication window.
+<br>
+Ø  Click on Fit in window (Ctrl + 0)
+<br><br>
+<u>To Show or Hide Tools</u>
+<br>
+Ø  Click on window menu.
+<br>
+Ø  Click on Show or Hide Tools.
+<br><br>
+<u>Pointer Tool</u> 
+<br>
+Use the Pointer tool to select, move and resize text objects and graphics.
+<br><br>
+<u>Rotating Tool</u> 
+<br>
+Use the rotating tool to select and rotate objects.
+<br><br>
+<u>Straight Line Tool </u>
+<br>
+ Use the straight line tool to draw straight lines in any direction.
+ <br><br>
+<u>Rectangle Tool </u>
+<br>
+Use the rectangle tool to draw squares, rounded rectangles and rectangles.
+<br><br>
+<u>Ellipse Tool</u>
+<br>
+Use the ellipse tool to draw circles and ellipses.
+<br><br>
+<u>Polygonal Tool</u> 
+<br>
+Use the polygonal tool to draw polygons, triangles, stars etc.
+<br><br>
+<u>Hand Tool </u>
+<br>
+Use the hand tool to scroll the page, or to preview and test hyperlinks.
+<br><br>
+<u>Text Tool</u> 
+<br>
+Use the text tool to type, select text and edit text.
+<br><br>
+<u>Crop Tool </u>
+  <br>
+  Use the crop tool to trim imported graphics.
+  <br><br>
+<u>Constrained Line Tool</u> 
+<br>
+Use the constrained line tool to draw vertical and horizontal lines.
+<br><br>
+<u>Rectangle Frame Tool</u>
+<br> 
+ Use the rectangle frame tool to create placeholder rectangle and square shape.
+ <br><br>
+<u>Ellipse Frame Tool</u>
+<br> 
+ Use the Ellipse frame tool to create placeholder ellipse and circle shape.
+ <br><br>
+<u>Polygonal Frame Tool</u> 
+<br>
+Use the polygonal frame tool to create placeholder polygonal / triangle or star shape.
+<br><br>
+<u>Zoom Tool</u>
+<br> 
+ Use the zoom tool to magnify or reduce an area of the page.
+ <br><br>
+<u>To Show or Hide Color Palette.</u>
+<br>
+Ø  Click on Window menu.
+<br>
+Ø  Click on show or hide colors. (Ctrl + J)
+<br><br>
+<u>To Show or Hide Control Palette</u>
+<br>
+Ø  Click on Window menu.
+<br>
+Ø  Click on show or hide control palette (Ctrl + “)
+<br><br>
+<u>Group</u>
+<br>
+It is used to combine the two or more objects.
+<br>
+Ø  Select the objects.
+<br>
+Ø  Click on Element > Group (Ctrl + G)
+<br><br>
+<u>Ungroup</u>
+<br>
+It is used to separate or ungroup the grouped object.
+<br>
+Ø  Select the grouped object.
+<br>
+Ø  Click on Element > Ungroup (Ctrl + Shift + G)
+<br><br>
+<u>Arrange</u>
+<br>
+It is used to arrange the selected object.
+<br>
+Ø  Select the object which you want to arrange.
+<br>
+Ø  Click on Element > Arrange.
+<br>
+Ø  Choose proper arrange option.
+<br>
+•	Bring to front (Ctrl + Shit +])
+<br>
+•	O   Bring forward (Ctrl + ])
+<br>
+•	Send backward (Ctrl + [)
+<br>
+•	O   Sent to back (Ctrl + Shift + [)
+<br><br>
+
+<u>Fill</u>
+<br>
+It is used to fill or change the fill color style of selected graphics.
+<br>
+Ø  Select the object.
+<br>
+Ø  Click on Element > Fill.
+<br>
+Ø  Choose proper fill option.
+<br><br>
+<u>Stroke</u>
+<br>
+It is used to change the outline or stroke style of selected object.
+<br>
+Ø  Select an object.
+<br>
+Ø  Click on Element menu > Stroke.
+<br>
+Ø  Choose proper stroke option.
+<br><br>
+<u>Fill & Stroke</u>
+<br>
+It is used to fill and change the fill colour and stroke style, width and colour of selected object.
+<br>
+Ø  Select the object.
+<br>
+Ø  Click on Element menu > Fill & Stroke.
+<br>
+Ø  Choose proper fill colour, stroke style, colour and width.
+<br>
+Ø  Click on Ok.
+<br><br>
+<u>Align Object’s</u>
+<br>
+It is used to define the alignment of selected object.
+<br>
+Ø  Select the two or more objects.
+<br>
+Ø  Click on Element menu > Align Object’s.
+<br>
+Ø  Define the alignment as you need.
+<br>
+Ø  Click on Ok.
+<br><br>
+<u>Frame</u>
+<br>
+It is used to define the properties of select object.
+<br>
+Ø  Select the object.
+<br>
+Ø  Click on Element > Frame.
+<br>
+Ø  Choose proper frame option and set their properties.
+<br>
+Ø  Click on Ok.
+<br><br>
+<u>Bullets and Numbering</u>
+<br>
+It is used to insert the bullets and numbering into selected paragraphs.
+<br>
+Ø  Select the paragraphs.
+<br>
+Ø  Click on Utilities menu > Bullets and Numbering.
+<br>
+Ø  Choose Bullets or Numbers Tab and their style.
+<br>
+Ø  Specify the number of paragraphs.
+<br>
+Ø  Click on Ok.
+<br><br>
+<u>Indents / Tabs</u>
+<br>
+It is used to define the indents / tabs of selected parapgraphs or bulleted or numbered paragraphs.
+<br>
+Ø  Select the bulleted or numbered paragraphs.
+<br>
+Ø  Click on Type menu > Indents / Tabs (Ctrl + I)
+<br>
+Ø  Define the tab stop.
+<br>
+Ø  Click on Apply > Ok.
+<br><br>
+<u>To Place an Image or Import image.</u>
+<br>
+Ø  Click on File menu > Place (Ctrl + D)
+<br>
+Ø  Specify the location and choose required image file.
+<br>
+Ø  Click on Open.
+<br>
+Ø  Now drag the mouse pointer by holding down its primary button then release it.
+<br><br>
+<u>Document Setup</u>
+<br>
+It is used to define the page size, page orientation, number of pages, page options, page margins, resolution output of current publication.
+<br>
+Ø  Click on File menu > Document Setup (Ctrl + Shift + P)
+<br>
+Ø  Specify the page size ( A4 / Letter / A3 / B4 / A5 etc.), Page orientation (Tall / Wide) , Page Options, Number of pages, Page Margins (Inside / Outside / Top / Bottom) , Resolution Output ets.
+<br>
+Ø  Click on Ok.
+<br>
+To Increase Resolution Output of an image(Preference Command)
+<br>
+Ø  Click on File menu > Preference > General (Ctrl + K)
+<br>
+Ø  Choose High Resolution.
+<br>
+Ø  Click on Ok.
+<br>
+Note: This command helps you to set the properties of current publication.
+<br><br>
+<u>Undo</u>
+<br>
+It is used to repeat the previous action of current publication.
+<br>
+Ø  Click on Edit > Undo (Ctrl + Z)
+<br><br>
+<u>Cut or Copy and Paste</u>
+<br>
+It is used to cut or copy and paste the selected object or text.
+<br>
+Ø  Select the object or text which you want to cut or copy.
+<br>
+Ø  Click on Edit > Cut (Ctrl +X) or Copy (Ctrl + C).
+<br>
+Ø  Re-again, Click on Edit > Paste (Ctrl + V)
+<br><br>
+<u>Clear</u>
+<br>
+It is used to delete the selected object or text.
+<br>
+Ø  Select the text or object.
+<br>
+Ø  Click on Edit > Clear.
+<br><br>
+Select All
+<br>
+It is used to select the all objects or paragraphs.
+<br>
+Ø  Click on Edit > Select All (Ctrl + A).
+<br><br>
+<u>Deselect All</u>
+<br>
+It is used to deselect the selected object or paragraphs.
+<br>
+Ø  Click on Edit > Deselect (Ctrl + Shift + A)
+<br>
+<u>Paste Multiple</u>
+<br>
+It is used to paste the copied object in number of define paste copies.
+<br>
+Ø  Cut or Copy any object or text.
+<br>
+Ø  Click on Edit > Paste Multple.
+<br>
+Ø  Define the number of paste copies.
+<br>
+Ø  Click on Ok.
+<br><br>
+<u>Paste Special</u>
+<br>
+It is used to paste the copied object from current publication or different application.
+<br>
+Ø  Cut or copy any object.
+<br>
+Ø  Click on Edit > Paste Special
+<br>
+Ø  Choose proper paste option.
+<br>
+Ø  Click on Ok.
+<br><br>
+
+<u>Insert Object</u>
+<br>
+It is used to insert or import an object or image from specified application.
+<br>
+Ø  At first save the current application.
+<br>
+Ø  Click on Edit > Insert Object.
+<br>
+Ø  Choose Create New and choose proper object application.
+<br>
+Ø  Click on Ok.
+<br>
+Ø  Open or create any object in specified application.
+<br>
+Ø  Click on File > Close & return to ....................pmd.
+<br><br>
+<u>Edit Story / Edit Layout</u>
+<br>
+It is used to edit the text of current publication.
+<br>
+Ø  Select the text.
+<br>
+Ø  Click on Edit > Edit story.
+<br>
+Ø  Edit the text as required and Re-again Goto Edit menu > Edit Layout (Ctrl + E)
+<br><br>
+<u>Insert Pages</u>
+<br>
+It is used to insert the number of pages in current publication.
+<br>
+Ø  Click on Layout menu > Insert Page.
+<br>
+Ø  Choose After or Before option and define the number of inserting pages.
+<br>
+Ø  Click on Ok.
+<br><br>
+<u>Remove Pages</u>
+<br>
+It is used to remove or delete the page.
+<br>
+Ø  Click on Layout menu > Remove Page.
+<br>
+Ø  Define the page number which you want to reGo Back
+<br>
+Ø  Click on Layout menu > Go Back (Ctrl + PgUp)
+<br><br>
+<u>Go Forward</u>
+<br>
+Ø  Click on Layout menu > Go Forward (Ctrl + PgDn)
+<br><br>
+<u>Column Guide</u>
+<br>
+It is used to define the number of columns and space between the columns of current publication.
+<br>
+Ø  Click on Layout menu > Column Guide.
+<br>
+Ø  Define the number of columns and space between the columns.
+<br>
+Ø  Click on Ok.
+<br><br>
+
+<u>Auto Flow</u>
+<br>
+Whereas text blocks are threaded together somewhat automatically as you flow text, text frames must be threaded together manually. Once text frames are threaded, however, you can more easily redirect the flow of text through them than you can with text blocks. (Threaded frames also differ from threaded text blocks in that, when you delete a threaded frame, the text in the frame moves to the next frame in the thread.)
+<br>
+Ø  With the pointer tool, select a text frame or an empty frame.
+<br>
+Ø  Click on Layout >Autoflow.
+<br>
+Ø  Click the bottom windowshade handle. (It will display automatic text flow icon ()
+<br>
+Ø  Position the loaded text icon where you want the top of the first text block to be, and then click to begin flowing the text.
+<br>
+Note:- Text fills the column to the bottom margin and then moves to the top of the next column (or the next page). PageMaker continues flowing text, adding pages as necessary until the entire story is placed.
+<br><br>
+<u>Change Case</u>
+<br>
+It is used to change the case of selected sentences or paragraphs.
+<br>
+Ø  Select the sentence.
+<br>
+Ø  Click on Utilities > Plug-Ins > Change Case.
+<br>
+Ø  Choose proper case option.
+<br>
+Ø  Click on Apply >Ok.move.
+<br>
+Ø  Click on Ok.
+<br><br>
+<u>GoTo Page</u>
+<br>
+It is used to jump into define page.
+<br>
+Ø  Click on Layout menu >GoTo Page. (Alt + Ctrl + G)
+<br>
+Ø  Define the page number where you want to jump.
+<br>
+Ø  Click on Ok.
+<br><br>
+<u>Sort Pages</u>
+<br>
+It is used to arrange the page with its contents.
+<br>
+Ø  Click on Layout menu > Sort pages.
+<br>
+Ø  Arrange the page as required.
+<br>
+Ø  Click on Ok.
+<br><br>
+<u>Go Back</u>
+<br>
+Ø  Click on Layout menu > Go Back (Ctrl + PgUp)
+<br><br>
+<u>Go Forward</u>
+<br>
+Ø  Click on Layout menu > Go Forward (Ctrl + PgDn)
+<br><br>
+<u>Column Guide</u>
+<br>
+It is used to define the number of columns and space between the columns of current publication.
+<br>
+Ø  Click on Layout menu > Column Guide.
+<br>
+Ø  Define the number of columns and space between the columns.
+<br>
+Ø  Click on Ok.
+<br><br>
+<u>Auto Flow</u>
+<br>
+Whereas text blocks are threaded together somewhat automatically as you flow text, text frames must be threaded together manually. Once text frames are threaded, however, you can more easily redirect the flow of text through them than you can with text blocks. (Threaded frames also differ from threaded text blocks in that, when you delete a threaded frame, the text in the frame moves to the next frame in the thread.)
+<br>
+Ø  With the pointer tool, select a text frame or an empty frame.
+<br>
+Ø  Click on Layout >Autoflow.
+<br>
+Ø  Click the bottom windowshade handle. (It will display automatic text flow icon ()
+<br>
+Ø  Position the loaded text icon where you want the top of the first text block to be, and then click to begin flowing the text.
+<br>
+Note:- Text fills the column to the bottom margin and then moves to the top of the next column (or the next page). PageMaker continues flowing text, adding pages as necessary until the entire story is placed.
+<br><br>
+<u>Change Case</u>
+<br>
+It is used to change the case of selected sentences or paragraphs.
+<br>
+Ø  Select the sentence.
+<br>
+Ø  Click on Utilities > Plug-Ins > Change Case.
+<br>
+Ø  Choose proper case option.
+<br>
+Ø  Click on Apply > Ok.
+   </p>
+ </div>
+ <hr>
+ <!-------------Corel Draw-->
+ <div id="Corel-draw">
+  <h3 class="photoshop-head">Corel Draw</h3>
+  <br>
+  <b>1.What is CorelDraw  </b>
+  <br>
+  CorelDraw is a vector graphic editor which is developed by CorelDraw Corporation. CorelDraw  which also called Corel’s Graphics Suite which have CorelDraw with a bitmap image editor, Corel Photo-Paint, and other graphics-related programs. CorelDraw provide verity of task like that Contrast adjustment, colour balancing, adding special effects like borders to images, and it is capable of working with multiple layers and multiple pages. CorelDraw can help users develop Banners, business cards, Brochure, Certificates, Envelopes, Invoices, Memo and so many other things.
+  <br><br>
+  <b>2.Components of CorelDraw Environment (window)</b>
+  <br>
+  When we open the CorelDraw then we have found following elements.
+  <br><br>
+  <u> Standard Toolbar</u>
+  <br>
+  Standard Toolbar
+  Standard toolbar consist on the standard option icons just like save , copy , cut .You can also customize this 
+  Toolbar
+  <br><br>
+  <u>Property Bar</u>
+  <br>
+  When we select any tools in CorelDraw then the property option related with this tool appear in this bar. This enables you to access commands that are specific to the current tool.
+  <br><br>
+  <u>Tool Box</u>
+  This tool bar consist many tools which provide diffirent function in CorelDraw.
+  <br><br>
+  <u>Rulers</u>
+  <br>
+  The Rulers is  show the height and width of the page and also help to create other object in Corel page.
+  <br><br>
+  <u>Color Palette</u>
+  <br>
+  The Corel Color Palette by default is located to the right of the work window is easy and quick way to apply the color of any object.
+  <br><br>
+  <u>Status Bar</u>
+  <br>
+  Basically Status Bar always is used to give you information in any application. In CorelDraw it has same feature and also tells about the cursor movements or symbol properties such as the fill or size.
+  <br><br>
+  <u>Page Navigator</u>
+  When we create multiple pages then page selector is used move between pages. We can also add the pages through this option.
+  <br><br>
+ <u> Dockers Tabs</u>
+ <br>
+  Dockers allow access to effects, styles, colors, and many other features of CorelDRAW. They can be added or remove through the window menu.
+  <br><br>
+ <u> Flyouts in CorelDraw</u>
+ <br>
+  In CorelDraw tools box there is a small triangle in the lower right corner of each tools button which display the Flyouts. Flyouts contain the additional tools.  These flayouts activated by pressing left key and hold down on any tool button with the mouse.
+  <br>
+  Following are some flayout and its different Tools.
+  <br><br>
+  <u>Shape Edit Flyout</u>
+  <br>
+  Shape edit flyout holds Shape Edit, Knife, Smudge, Roughen, Free Transform and Virtual Segment Delete Tools.
+  <br><br>
+  <u>Zoom Tool Flyout</u>
+  <br>
+  Zoom tool flyout contains the Zoom Tool along with hand tool which is used for moving the drawing page around the display area.
+  <br><br>
+  <u>Curve Flyout</u>
+  <br>
+  Curve flyout consist on the Bezier Tool, Artistic Media Tool, Dimension Tool and the Connector Tool.
+  Rectangle Tool Flyout
+  <br>
+  This flayout holds the Rectangle tool and the 3-point Rectangle tool.
+  Object Flyout
+  <br>
+  This flayout contain the Polygon Tool , Spiral Tool and the Graph Paper tool.
+  <br><br>
+  <u>Interactive Fill Flyout</u>
+  <br>
+  Interactive fill flyout consist on  the Interactive Fountain Fill Tool and the Mesh Fill Tool.
+  <br><br>
+  <u> Interactive Tool Flyout</u>
+  <br>
+  Interactive tool flyout consist on Interactive Blend, Contour, Distortion, Drop Shadow, Envelope, Extrude, and 
+  Transparency Tools
+  <br><br>
+  <u>Eyedropper Tool Flyout</u>
+  <br>
+  Eyedropper tool flyout have the Eyedropper Tool along with paint bucket tool.
+  <br><br>
+  <u>Outline Tool Flyout</u>
+  <br>
+  Outline tool flyout displays options for changing line color, styles, weights, and ends.
+  <br><br>
+  <u>Fill Tool Flyout</u>
+  <br>
+  Fill tool flyout related with the colour filling. It contains fill color, styles, creating custom colours, and removing fills.
+  <br><br>
+  <u>Zooming In CorelDraw</u>
+  <br>
+  When we work in CorelDraw then many time we want to get closer to see detail or make small adjustments. For this purpose we use Zoom tool. The following procedure is used for zomming.
+  <br>
+  1.	     Select the Zoom Tool (F2) from toolbox.
+  <br>
+  2.	     Your mouse cursor shape changes to the magnifying glass with the plus sign and Property Bar   also displays some related option of Zooming.
+  <br>
+  3.	     Click in an area which you want to zoom.
+  <br>
+  4.	     You can also zoom in by dragging the Zoom Tool around a specific area.
+  <br>
+  5.	     You can also press F3 key to return back to previous position.
+  <br>
+  
+ </div>
+ <hr>
+</section>
+
+<script>// close the toggle menu if user clicks outside of the menu
+
+  $(document).click(function(event) {
+    if(
+      $('.toggle > input').is(':checked') &&
+      !$(event.target).parents('.toggle').is('.toggle')
+    ) {
+      $('.toggle > input').prop('checked', false);
+    }
+  })</script>
+</body>
+</html>

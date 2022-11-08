@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ms office-notes</title>
+    <style>
+      html{
+        scroll-behavior: smooth;
+      }
+        body {
+  margin: 0;
+  color: #222222;
+  font-size: 1em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/*---------- heading ----------- */
+.masthead {
+    padding: 15em 0;
+    background-image: url("images/ms-notes.jpg" );
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 1em solid #ffcf33;
+    height: 50px;
+}
+
+.masthead-heading {
+  font-size: 6em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  text-shadow: 1.5px 3px 0px #edc647;
+  color: #F7E199;
+  margin-top: -0.2em;
+
+}
+.masthead-intro {
+  font-size: 2em;
+  font-family: "Gentium Book Basic", Georgia, serif;
+  text-align: center;
+  color: #e5e5e5;
+  margin-bottom: 0.1em;
+}
+
+/*---------- section ----------- */
+.intro,
+.where-Im-from,
+.more-about-me {
+  max-width: 38em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.intro > p,
+.where-Im-from > p,
+.more-about-me > p {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+section > h1 {
+  font-size: 30px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-bottom: 50px;
+  padding-top: 30px;
+}
+
+.more-about-me > h2 {
+  font-size: 1.2em;
+  font-family: "Gentium Book Basic";
+  font-weight: bold;
+  color: #f7e199;
+}
+
+/*---------- footer ----------- */
+.content-footer {
+  margin-top: 8em;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  background-color: #ffcf33;
+}
+
+.content-footer > p {
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-family: "Open Sans"
+}
+
+footer > ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+footer ul li {
+  list-style-type: none;
+  display: inline;
+}
+
+.content-footer a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #000;
+}
+
+
+   h2{
+    text-align: center;
+   }
+   a{
+    text-decoration: none;
+   }
+
+   .whatsapp_float{
+
+position: fixed;
+bottom: 40px;
+right: 10px;
+}
+button{
+    background-color: orangered;
+    color: white;
+    border: orangered;
+    width: 110px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/*
+Table
+*/
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+
+
+
+/* general styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  
+}
+.form{
+    text-align: center;
+}
+p{
+    font-size: 25px;
+}
+/*
+Dropdown
+
+*/
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #222222
+}
+
+/* Dropdown */
+
+
+.dropdown {
+  
+  width: 230px;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+}
+.dropdown.toggle > input {
+  display: none;
+}
+.dropdown > a, .dropdown.toggle > label {
+  border-radius: 2px;
+  box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+}
+.dropdown > a::after, .dropdown.toggle > label::after {
+  content: "";
+  float: right;
+  margin: 15px 15px 0 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #CCC;
+}
+.dropdown ul {
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 6px 5px -5px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+.dropdown a, .dropdown.toggle > label {
+  display: block;
+  padding: 0 0 0 10px;
+  text-decoration: none;
+  line-height: 40px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  background:orangered;
+}
+.dropdown li {
+  height: 0;
+  overflow: hidden;
+  transition: all 500ms;
+}
+.dropdown.hover li {
+  transition-delay: 300ms;
+}
+.dropdown li:first-child a {
+  border-radius: 2px 2px 0 0;
+}
+.dropdown li:last-child a {
+  border-radius: 0 0 2px 2px;
+}
+.dropdown li:first-child a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #FFF;
+  margin: -10px 0 0 30px;
+}
+.dropdown a:hover, .dropdown.toggle > label:hover, .dropdown.toggle > input:checked ~ label {
+  background-color: gold;
+  color: black;
+}
+.dropdown > a:hover::after, .dropdown.toggle > label:hover::after, .dropdown.toggle > input:checked ~ label::after {
+  border-top-color: #AAA;
+}
+.dropdown li:first-child a:hover::before {
+  border-bottom-color: #EEE;
+}
+.dropdown.hover:hover li, .dropdown.toggle > input:checked ~ ul li {          
+  height: 40px;
+}
+.dropdown.hover:hover li:first-child, .dropdown.toggle > input:checked ~ ul li:first-child {
+  padding-top: 15px;
+}
+
+/*
+UP Button
+*/
+.up_float_btn{
+
+position: fixed;
+bottom: 40px;
+left: 10px;
+}
+.btn-1{
+    background-color: orangered;
+    color: white;
+    border: orangered;
+    width: 110px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.ms-header{
+  text-align: center;
+  background-color: gold;
+  height: 50px;
+}
+.mark-table{
+  font-size: 15px;
+text-align: center;
+
+}
+
+
+.mark-head{
+  text-align: center;
+  font-size: 25px;
+}
+.market-table{
+  font-size: 20px;
+}
+
+#Salary{
+  font-size: 20px;
+}
+
+#Line-Diagram{
+  font-size: 20px;
+}
+   </style>
+</head>
+<body>
+    
+    
+    <div class="whatsapp_float">
+        <a href="index2.html" class="whatsapp_float_btn">
+                <button>Back</button> </a>
+            </div>
+            <div class="up_float">
+                <a href="#h2" class="up_float_btn">
+                        <button class="btn-1">Up</button> </a>
+                    </div>
+  <h2 id="h2">INFOTECH COMPUTER EDUCATION CENTRE</h2>
+    <header class="masthead">
+        <p class="masthead-intro"></p>
+        <h1 class="masthead-heading"></h1>
+      </header>
+      <section class="intro" id="up">
+        <!-----------DropDown-->
+   <center>
+    <nav>
+      <div class="dropdown hover" id="up3">
+        <a href="#up3" class="drop1">Select Topic</a>
+        <ul>
+          <li><a href="#marksheet">Marksheet</a></li>
+          <li><a href="#market">Market</a></li>
+          <li><a href="#salary">Salary List</a></li>
+          <li><a href="#Line-Diagram">Line Diagram</a></li>
+        
+        </ul>
+      </div>
+      </nav>
+      </center>
+      
+      <!-----------Markssheet-->
+      <div id="marksheet">
+      <h1 class="ms-header">Microsoft Excel</h1>
+
+  <table class="mark-table">
+    <p class="mark-head"><u>Marksheet</u></p>
+    <tr>
+      <th>Sl No</th>
+      <th>Name</th>
+      <th>Assamese</th>
+      <th>English</th>
+      <th>Gen Science</th>
+      <th>Social Science</th>
+      <th>Maths</th>
+      <th>Computer</th>
+      <th>Total Mark</th>
+    </tr>
+    <tr>
+      <th>1</th>
+      <th>Partha </th>
+      <th>98</th>
+      <th>67</th>
+      <th>88</th>
+      <th>76</th>
+      <th>78</th>
+      <th>55</th>
+      <th>600</th>
+    </tr>
+    <tr>
+      <th>2</th>
+      <th>Raju </th>
+      <th>49</th>
+      <th>67</th>
+      <th>99</th>
+      <th>76</th>
+      <th>78</th>
+      <th>90</th>
+      <th>600</th>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>Arup</th>
+      <th>98</th>
+      <th>67</th>
+      <th>86</th>
+      <th>97</th>
+      <th>58</th>
+      <th>92</th>
+      <th>600</th>
+    </tr>
+    <tr>
+      <th>4</th>
+      <th>Apurba </th>
+      <th>78</th>
+      <th>77</th>
+      <th>58</th>
+      <th>73</th>
+      <th>58</th>
+      <th>65</th>
+      <th>600</th>
+    </tr>
+    <tr>
+      <th>5</th>
+      <th>Manjul </th>
+      <th>89</th>
+      <th>78</th>
+      <th>88</th>
+      <th>99</th>
+      <th>78</th>
+      <th>53</th>
+      <th>600</th>
+    </tr>
+    <tr>
+      <th>6</th>
+      <th>Rahul </th>
+      <th>87</th>
+      <th>97</th>
+      <th>48</th>
+      <th>73</th>
+      <th>78</th>
+      <th>35</th>
+      <th>600</th>
+    </tr>
+    <tr>
+      <th>7</th>
+      <th>Simanta </th>
+      <th>70</th>
+      <th>45</th>
+      <th>99</th>
+      <th>46</th>
+      <th>98</th>
+      <th>51</th>
+      <th>600</th>
+    </tr>
+    
+    
+  </table>
+  <p>
+  <br>
+  1. TOTAL :- = SUM (Sub no Select)
+  <br>
+2. MIN :- = MIN (Sub no Select)
+<br>
+3. MAX :- = MAX(Sub no Select)
+<br>
+4. AVERAGE :- = AVERAGE(Sub no Select)
+<br>
+5. PERCENTAGE :- = (Total Mark /6)
+<br>
+6. DATE =TODAY( )
+<br>
+7. DATE & TIME= NOW( )
+<br>
+8. RESULT :- IF(Average>30,"Pass",IF(Average<30,"Fail"))
+<br>
+9. DIVISION :- IF(Average>60,"1st",IF(Average>45,"2nd",IF(Average>30,"3rd","Fail")))
+ 
+</p>
+</div>
+<hr>
+<!----------Market-->
+<div id="market">
+  <p class="mark-head"><u>Market</u>
+    <center>
+<table class="market-table">
+  <tr>
+    <th>Sl No</th>
+    <th>ITEM</th>
+    <th>QUANTITY</th>
+    <th>RATE</th>
+    
+  </tr>
+  <tr>
+    <th>1</th>
+    <th>Mobile</th>
+    <th>50</th>
+    <th>12000</th>
+    
+  </tr>
+  <tr>
+    <th>2</th>
+    <th>Computer</th>
+    <th>10</th>
+    <th>40000</th>
+    
+  </tr>
+  <tr>
+    <th>3</th>
+    <th>FAN</th>
+    <th>13</th>
+    <th>1200</th>
+    
+  </tr>
+  <tr>
+    <th>4</th>
+    <th>T-SHART</th>
+    <th>18</th>
+    <th>300</th>
+  </tr>
+</table>
+</center>
+<br>
+1) TOTAL RS= QUANTITY*RATE
+<br>
+2) DISCOUNT RS=
+IF(TOTAL>=100,TOTAL*5%
+<br>
+3) NETT PRISE= TOTAL-
+DISCOUNT
+<br>
+4) GRAND PRISE=SUM(ALL TOTAL
+SELECT)
+</p>
+</div>
+<hr>
+<!---------------Salary List-->
+<div id="Salary">
+  <p class="mark-head"><u>Salary List</u></p>
+  <center>
+  <table>
+    <tr>
+    <th>SL NO</th>
+    <th> NAME</th>
+    <th> DESIGNATION</th>
+    <th>B.P(BASIC PAY)</th></tr>
+     <tr> 
+      <th>1</th>
+      <th> A </th>
+        <th>Head Master</th>
+        <th>50000</th>
+      </tr>
+      <tr>
+        <th>2</th>
+        <th>B</th>
+        <th>B.S.F</th>
+        <th>70000</th>
+      </tr>
+      <tr>
+        <th>3</th>
+        <th>C</th>
+        <th>Doctor</th>
+        <th>90000</th>
+      </tr>
+      <tr>
+        <th>2</th>
+        <th>D</th>
+        <th>C.R.P.F</th>
+        <th>40000</th>
+      </tr>
+  </table>
+  </center>
+  <br><br>
+  1) D.A (DAILY ALLOWANCE)
+=B.P*25%
+<br><br>
+
+2) T.A (TRAVELLING ALLOWANCE)
+=B.P*20%
+<br><br>
+3) M.A (MEDICAL ALLOWANCE)
+<br><br>
+= B.P*15%
+4) H.R.A (HOUSE RENT ALLOWANCE)
+=B.P*10%
+<br><br>
+5) S.P (SPECIAL PAID)
+=B.P*5%
+<br><br>
+6) T.S (TOTAL SALARY)
+=SUM (B.P TO S.P)
+<br><br>
+7) INCOME TAX
+=IF(T.S.=100000,T.S*20%,IF(AND(T.S<100000,T.S>=50
+000),T.S*10%,T.S*5%))
+<br><br>
+8) G.S (GROSS SALARY)
+=TOTAL SALARY-INCOME TAX
+<br><br>
+9) 12 MONTHS SALARY
+=T.S*12
+</div>
+<hr>
+
+<div id="Line-Diagram">
+  <p class="mark-head"><u>Line Diagram</u></p>
+  <center>
+  <table>
+<tr>
+  <th>YEAR</th>
+  <th>2000</th>
+  <th>2005</th>
+  <th>2010</th>
+  <th>2015</th>
+  <th>2020</th>
+</tr>
+
+<tr><th>Male</th>
+  <th>5000</th>
+  <th>12000</th>
+  <th>25000</th>
+  <th>45000</th>
+  <th>60000</th>
+  </tr>
+  <tr>
+    <th>Female</th>
+    <th>7000</th>
+    <th>10000</th>
+    <th>30000</th>
+    <th>40000</th>
+    <th>70000</th>
+  </tr>
+
+  </table>
+  </center>
+  <br>
+  
+    1) SELECT ALL DATA
+    <br><br>
+2) INSERT
+<br><br>
+3) LINE
+<br><br>
+4) 2D LINE
+<br><br>
+5) PAGE LAYOUT
+<br><br>
+6) CHART TITLE
+<br><br>
+7) CENTERED OVERLY TITLE
+<br><br>
+8) LINE DIAGRAM
+<br><br>
+9) AXIS TITLE –PRIMARY HORIZONTAL AXIS TITLE
+---TITLE BELOW AXIS.
+<br><br>
+10) AXIS TITLE –PRIMARY VERTICAL AXIS TITLE—
+VERTICAL TITLE.
+<br><br>
+11) LEDGENT—SHOW LEDGENT AT RIGHT.
+<br><br>
+12) DATA LABEL—MORE DATA LABEL OPTION –
+CATEGORY NAME---VALUE---- LABEL POSITTION ---
+BELOW -----INCLUDE LEDGENT IN LABEL
+(SEMICOLUN)
+<br><br>
+13) DATA TABLE --- SHOW DATA TABLE
+  
+</div>
+<hr>
+<div id="Line-Diagram">
+  <p class="mark-head"><u>Line Diagram</u></p>
+  <center>
+  <table>
+<tr>
+  <th>YEAR</th>
+  <th>2000</th>
+  <th>2005</th>
+  <th>2010</th>
+  <th>2015</th>
+  <th>2020</th>
+</tr>
+
+<tr><th>Male</th>
+  <th>5000</th>
+  <th>12000</th>
+  <th>25000</th>
+  <th>45000</th>
+  <th>60000</th>
+  </tr>
+  <tr>
+    <th>Female</th>
+    <th>7000</th>
+    <th>10000</th>
+    <th>30000</th>
+    <th>40000</th>
+    <th>70000</th>
+  </tr>
+
+  </table>
+  </center>
+  <br>
+  
+    1) SELECT ALL DATA
+    <br><br>
+2) INSERT
+<br><br>
+3) LINE
+<br><br>
+4) 2D LINE
+<br><br>
+5) PAGE LAYOUT
+<br><br>
+6) CHART TITLE
+<br><br>
+7) CENTERED OVERLY TITLE
+<br><br>
+8) LINE DIAGRAM
+<br><br>
+9) AXIS TITLE –PRIMARY HORIZONTAL AXIS TITLE
+---TITLE BELOW AXIS.
+<br><br>
+10) AXIS TITLE –PRIMARY VERTICAL AXIS TITLE—
+VERTICAL TITLE.
+<br><br>
+11) LEDGENT—SHOW LEDGENT AT RIGHT.
+<br><br>
+12) DATA LABEL—MORE DATA LABEL OPTION –
+CATEGORY NAME---VALUE---- LABEL POSITTION ---
+BELOW -----INCLUDE LEDGENT IN LABEL
+(SEMICOLUN)
+<br><br>
+13) DATA TABLE --- SHOW DATA TABLE
+  
+</div>
+
+</div>
+</section>
+
+
+</body>
+</html>

@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="images/logocec.png" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Infotech Computer Education Centre</title>
+
+
+<style>
+html{
+ 
+ scroll-behavior: smooth;
+
+
+}
+    body{
+        background: gold;
+    }
+
+
+
+
+    /*
+Header Css
+    */
+    .header-fixed {
+	background-color:black;
+	box-shadow:0 1px 1px #ccc;
+	padding: 20px 40px;
+	height: 80px;
+	color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	box-sizing: border-box;
+	top:-100px;
+
+	-webkit-transition:top 0.3s;
+	transition:top 0.3s;
+}
+
+.header-fixed .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
+}
+.header-fixed-placeholder{
+	height: 80px;
+	display: none;
+}
+
+/* Logo */
+
+.header-fixed .header-limiter h1 {
+	float: left;
+	font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	margin: 0;
+}
+
+.header-fixed .header-limiter h1 span {
+	color: #5383d3;
+}
+/* The navigation links */
+
+.header-fixed .header-limiter a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.header-fixed .header-limiter nav {
+	font:16px Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	float: right;
+}
+
+.header-fixed .header-limiter nav a{
+	display: inline-block;
+	padding: 0 5px;
+	text-decoration:none;
+	color: #fafdff;
+	opacity: 0.9;
+}
+
+.header-fixed .header-limiter nav a:hover{
+	opacity: 1;
+}
+
+.header-fixed .header-limiter nav a.selected {
+	color: #608bd2;
+	pointer-events: none;
+	opacity: 1;
+}
+
+
+/* Fixed version of the header */
+
+body.fixed .header-fixed {
+	padding: 10px 40px;
+	height: 50px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+body.fixed .header-fixed-placeholder {
+	display: block;
+}
+
+body.fixed .header-fixed .header-limiter h1 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+body.fixed .header-fixed .header-limiter nav {
+	line-height: 28px;
+	font-size: 13px;
+}
+
+/* Making the header responsive */
+
+@media all and (max-width: 600px) {
+
+.header-fixed {
+    padding: 20px 0;
+    height: 75px;
+}
+
+.header-fixed .header-limiter h1 {
+    float: none;
+    margin: -8px 0 10px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.header-fixed .header-limiter nav {
+    line-height: 1;
+    float:none;
+}
+
+.header-fixed .header-limiter nav a {
+    font-size: 13px;
+}
+
+body.fixed .header-fixed {
+    display: none;
+}
+}
+
+
+
+
+
+
+
+
+    
+        /*
+book collection  csss
+
+        */
+
+
+body {
+	margin: 0;
+	padding: 0;
+	
+}
+.book,.book2{
+            text-align: center;
+            
+        }
+
+
+        /*
+slide csss
+
+        */
+        * {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+#slider {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+#slider #line {
+	height: 5px;
+	background: rgba(0,0,0,0.5);
+	z-index: 1;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+#slider #dots {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 16px;
+	display: flex;
+	justify-content: center;
+}
+
+#slider #dots li {
+	transition: 0.3s;
+	list-style-type: none;
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	background: rgba(0,0,0,0.5);
+	margin: 0 0.25em;
+	cursor: pointer;
+}
+
+#slider #dots li:hover,
+#slider #dots li.active {
+	background: white;
+}
+
+@keyframes line {
+
+	0% {width: 0%;}
+	100% {width: 100%;}
+
+}
+
+#slider #back,
+#slider #forword {
+	width: 6%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: 0.3s;
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	color: white;
+	font-weight: 700;
+    font-size: 2rem;
+	background: -moz-linear-gradient(left,  rgba(255,255,255,0.75) 0%, rgba(255,255,255,0) 100%);
+	background: -webkit-linear-gradient(left,  rgba(255,255,255,0.75) 0%,rgba(255,255,255,0) 100%);
+	background: linear-gradient(to right,  rgba(255,255,255,0.75) 0%,rgba(255,255,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfffffff', endColorstr='#00ffffff',GradientType=1 );
+}
+
+#slider #forword {
+	left: auto;
+	right: 0;
+	background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.75) 100%);
+	background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.75) 100%);
+	background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.75) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#bfffffff',GradientType=1 );
+}
+
+#slider:hover #back,
+#slider:hover #forword {
+	opacity: 0.7;
+}
+
+ul#move {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	background: gray;
+	margin-right: 100%;
+}
+
+
+ul#move li {
+	transition: 0.6s;
+	min-width: 100%;
+	color: white;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ul#move li img {
+	width: 100%;
+}
+
+ul#move li:nth-child(1) {
+	background: #657765;
+}
+
+ul#move li:nth-child(2) {
+	background: #456174;
+}
+
+ul#move li:nth-child(3) {
+	background: #984;
+}
+
+ul#move li:nth-child(4) {
+	background: #445566;
+}
+
+ul#move li:nth-child(5) {
+	background: #744674;
+}
+
+.book-header{
+    text-align: center;
+    font-size: 40px;
+}
+
+
+/*
+books-hover effect
+
+*/
+#portfolio{
+    padding: 50px 0;
+
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(46, 30, 30, 0.884),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+
+
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+
+}
+
+p,h3{
+    color: white;
+}
+.book-header{
+    color: black;
+}
+
+
+/*
+Dropdown
+*/
+
+nav a:hover{
+    background: orangered;
+    border-radius: 6px;
+}
+</style>
+</head>
+
+<body>
+  
+<header class="header-fixed">
+
+	<div class="header-limiter">
+
+		<h1><a href="index2.html">Infotech<span>CEC</span></a></h1>
+<nav>
+		
+			<a href="index2.html">Home</a>
+			<a href="#book-section">Books</a>
+           <a href="index6.html">Quiz</a>
+           <a href="#">Practice</a>
+			<a href="index4.html">Gallery</a>
+			<a href="index3.html">About</a>
+		
+</nav>
+
+<div class="header-fixed-placeholder"></div>
+
+</header>
+
+<section class="sec1">
+    <div id="slider">
+        <div id="line">
+    
+        </div>
+    
+        <ul id="move">
+            <li><img src="images/header.png" height="500px"></li>
+            <li><img src="images/head2.png" height="500px"></li>
+            <li><img src="images/head3.png" height="500px"></li>
+            <li><img src="images/head4.jpeg" height="500px"></li>
+            
+            
+            
+        </ul>
+        <div id="back">
+            
+        </div>
+        <div id="forword">
+            >
+        </div>
+        <div id="dots">
+            
+        </div>
+        
+    </div>
+    
+
+</section>
+<section class="sec2 " id="book-section">
+            
+ <div id="portfolio">
+                <div class="container">
+                    <h3 class="book-header" >Our Books</h3>
+                    <div class="work-list">
+                     
+                        <div class="work">
+                            <img src="images/funda.jpg">
+                            <div class="layer">
+                                <h3>COMPUTER FUNDAMENTALS</h3>
+                                <p>Computer History,Generation,Memory,Software Etc</p>
+                                <a href="index17.html">Read </a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="images/office.jpg">
+                            <div class="layer">
+                                <h3>MICROSOFT OFFICE</h3>
+                                <p>Microsoft Word,Excel,Access,Powerpoint</p>
+                                <a href="index18.html">Read</a>
+                            </div>
+                        </div>
+                        <div class="work">
+                            <img src="images/dtp.jpg">
+                            <div class="layer">
+                                <h3>DESKTOP PUBLISHING(DTP)</h3>
+                                <p>Adobe Photoshop,Pagemaker,CorelDraw</p>
+                                <a href="index19.html">Read</a>
+                            </div>
+                          
+                        </div>
+                    </div>
+        </div>
+        <br>
+        <div class="book2">
+            <div class="container">
+    
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/tally.jpg">
+                        <div class="layer">
+                            <h3>TALLY WITH GST</h3>
+                            <p>Basic of Account,Transaction,Gst Etc</p>
+                            <a href="index24.html">Read</a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/C.png" height="550PX">
+                        <div class="layer">
+                            <h3>PROGRAMMING WITH C</h3>
+                            <p>Input Output,Variables,Datatypes,Operator,Loop,Break/Continue,Array,String Etc</p>
+                            <a href="index21.html">Read</a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/c++.jpeg" height="550px">
+                        <div class="layer">
+                            <h3>PROGRAMMING WITH C++</h3>
+                            <p>Input Output,Variables,Datatypes,Operator,Loop,Break/Continue,Array,String Etc</p>
+                            <a href="index22.html">Read</a>
+                        </div>
+                      
+                    </div>
+                </div>
+    </div>
+        </div>
+        <div class="book2">
+            <div class="container">
+    
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/java.png">
+                        <div class="layer">
+                            <h3>PROGRAMMING WITH JAVA</h3>
+                            <p>Input Output,Variables,Datatypes,Operator,Loop,Break/Continue,Array,String Etc</p>
+                            <a href="index23">Read</a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/network.png">
+                        <div class="layer">
+                            <h3>COMPUTER NETWORKING</h3>
+                            <p>Basics,Data Link Layer,Network Layer,Transport Layer,Application Layer Etc</p>
+                            <a href="index26.html">Read</a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/web.png">
+                        <div class="layer">
+                            <h3>WEB-DEVELOPMENT</h3>
+                            <p>Html,Css,JavaScript,React Js,Node Js,Mongodb,Express Js Etc</p>
+                            <a href="index25.html">Read</a>
+                        </div>
+                      
+                    </div>
+                </div>
+    </div>
+        </div>
+        <div class="book2">
+            <div class="container">
+    
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/AI.png">
+                        <div class="layer">
+                            <h3>ARTIFICIAL INTELLIGENCE</h3>
+                            <p>Basic Only</p>
+                            <a href="index7.html">Read</a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/block.png">
+                        <div class="layer">
+                            <h3>BLOCKCHAIN TECHNOLOGY</h3>
+                            <p>Basic Only</p>
+                            <a href="index8.html">Read</a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/meta.png">
+                        <div class="layer">
+                            <h3>METAVERSE</h3>
+                            <p>Basic Only</p>
+                            <a href="index9.html">Read</a>
+                        </div>
+                      
+                    </div>
+                </div>
+    </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<script>
+
+	$(document).ready(function(){
+
+		var showHeaderAt = 150;
+
+		var win = $(window),
+				body = $('body');
+
+		// Show the fixed header only on larger screen devices
+
+		if(win.width() > 400){
+
+			// When we scroll more than 150px down, we set the
+			// "fixed" class on the body element.
+
+			win.on('scroll', function(e){
+
+				if(win.scrollTop() > showHeaderAt) {
+					body.addClass('fixed');
+				}
+				else {
+					body.removeClass('fixed');
+				}
+			});
+
+		}
+
+	});
+
+</script>
+
+
+
+<script>
+     window.onload = function() {
+
+let slider = document.querySelector('#slider');
+let move = document.querySelector('#move');
+let moveLi = Array.from(document.querySelectorAll('#slider #move li'));
+let forword = document.querySelector('#slider #forword');
+let back = document.querySelector('#slider #back');
+let counter = 1;
+let time = 3000;
+let line = document.querySelector('#slider #line');
+let dots = document.querySelector('#slider #dots');
+let dot;
+
+for (i = 0; i < moveLi.length; i++) {
+
+    dot = document.createElement('li');
+    dots.appendChild(dot);
+    dot.value = i;
+}
+
+dot = dots.getElementsByTagName('li');
+
+line.style.animation = 'line ' + (time / 1000) + 's linear infinite';
+dot[0].classList.add('active');
+
+function moveUP() {
+
+    if (counter == moveLi.length) {
+
+        moveLi[0].style.marginLeft = '0%';
+        counter = 1;
+
+    } else if (counter >= 1) {
+
+        moveLi[0].style.marginLeft = '-' + counter * 100 + '%';
+        counter++;
+    } 
+
+    if (counter == 1) {
+
+        dot[moveLi.length - 1].classList.remove('active');
+        dot[0].classList.add('active');
+
+    } else if (counter > 1) {
+
+        dot[counter - 2].classList.remove('active');
+        dot[counter - 1].classList.add('active');
+
+    }
+
+}
+
+function moveDOWN() {
+
+    if (counter == 1) {
+
+        moveLi[0].style.marginLeft = '-' + (moveLi.length - 1) * 100 + '%';
+        counter = moveLi.length;
+        dot[0].classList.remove('active');
+        dot[moveLi.length - 1].classList.add('active');
+
+    } else if (counter <= moveLi.length) {
+
+        counter = counter - 2;
+        moveLi[0].style.marginLeft = '-' + counter * 100 + '%';   
+        counter++;
+
+        dot[counter].classList.remove('active');
+        dot[counter - 1].classList.add('active');
+
+    }  
+
+}
+
+for (i = 0; i < dot.length; i++) {
+
+    dot[i].addEventListener('click', function(e) {
+
+        dot[counter - 1].classList.remove('active');
+        counter = e.target.value + 1;
+        dot[e.target.value].classList.add('active');
+        moveLi[0].style.marginLeft = '-' + (counter - 1) * 100 + '%';
+
+    });
+
+}
+
+forword.onclick = moveUP;
+back.onclick = moveDOWN;
+
+let autoPlay = setInterval(moveUP, time);
+
+slider.onmouseover = function() {
+
+    autoPlay = clearInterval(autoPlay);
+    line.style.animation = '';
+
+}
+
+slider.onmouseout = function() {
+
+    autoPlay = setInterval(moveUP, time);
+    line.style.animation = 'line ' + (time / 1000) + 's linear infinite';
+
+}
+
+}
+
+
+</script>
+
+</body>
+
+</html>
